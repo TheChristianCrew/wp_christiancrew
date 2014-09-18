@@ -1,0 +1,49 @@
+/*
+Theme Name: The Christian Crew
+Description: WordPress theme for The Christian Crew
+Version: 3.0
+Author: Keith Brinks
+Author URI: http://keithbrinks.com
+*/
+
+@import url('global.css');
+			
+/**
+ * Home Page
+ */
+#home-introduction h2 {
+	margin-bottom: 15px;
+}
+
+/**
+ * Widgets
+ */
+.widget {
+	background-color: #ffffff;
+	color: #000000;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+	.widget h3 {
+		text-align: center;
+	}
+	
+	.widget h3 a {
+		color: #000000;
+		text-decoration: none;
+	}
+	
+	.widget_rss li {
+		list-style: none;
+		margin-bottom: 10px;
+	}
+	
+		.widget_rss li a {
+			display: block;
+		}
+
+.paypal_target_meter_widget {
+	background-color: #339933;
+	color: #ffffff;
+}
