@@ -1,49 +1,31 @@
 <?php get_header(); ?>
 
-	<div id="home-introduction" class="page-title">
+	<h1>News</h1>
 	
-		<div class="inner-wrap grid">
-		
-			<div class="col-8">
-		
-				<h2>Welcome to The Christian Crew</h2>
-				
-				<p>We are The Christian Crew - a Christian gaming community founded in 2003. Our mission is to provide a gaming community with a clean environment, of fellowship, and exciting gameplay. We are committed to the ministry and growth of our community for the Kingdom of God, presenting the Gospel of Jesus Christ as the fundamental truth of God. We believe that we are Christians first, and fellow gamers second.</p>
-		
-				<p>Welcome to our community!</p>
-				
-			</div>
-			
-			<div class="col-4">
-			
-				Call to action buttons.
-			
-			</div>
-			
-		</div>
-	
-	</div>
+	<div class="column_left">
 
-	<div class="container">
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<article <?php post_class('box_shadow') ?> id="post-<?php the_ID(); ?>">
+				<h2 class="post_title"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+				<?php include(TEMPLATEPATH .'/inc/meta.php'); ?>
+				<div class="entry">
+					<?php the_content(); ?>
+				</div> <!-- /entry -->
+			</article> <!-- /post_classes -->
+		<?php endwhile; ?>
 	
-		<div class="inner-wrap grid">
-		
-			<div class="col-8">
-			
-				<h2>News &amp; Announcements</h2>
-	
-				<?php do_shortcode('[phpbb-list-topics include="2"]'); ?>
-				
-			</div>
-			
-			<div class="col-4">
-			
-				<?php get_sidebar(); ?>
-			
-			</div>
-			
-		</div>
+		<?php include (TEMPLATEPATH . '/inc/nav.php' ); ?>
 
-	</div>
+		<?php else : ?>
+			<h2>No articles were found!</h2>
+		<?php endif; ?>
+		
+	</div><!-- /column_left -->
+	
+	<div class="column_right">
+	
+		<?php get_sidebar(); ?>
+		
+	</div><!-- /column_right -->
 	
 <?php get_footer(); ?>

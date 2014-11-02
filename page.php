@@ -1,45 +1,64 @@
-<?php get_header(); ?>
+<?php
 
-	<div class="page-title">
+/**
+ * Place 'the loop' inside a function so we can reuse it
+ */
+function get_loop() {
 	
-		<div class="inner-wrap">
+	if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
-			<h2><?php the_title(); ?></h2>
-			
-		</div>
+	<div class="page" id="post-<?php the_ID(); ?>">
+
+		<h1><?php the_title(); ?></h1>
+
+		<div class="entry">
+
+			<?php the_content(); ?>
+
+			<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
+
+		</div> <!-- /entry -->
+
+	</div> <!-- /page -->
+
+<?php endwhile; endif;
 	
-	</div>
+}
 	
-	<div class="container">
+/**
+ * Get the header
+ */
+get_header();
+
+/**
+ * Check if the page has an active sidebar
+ *
+ * If yes, make the page multi-column
+ * Otherwise make it a fullwidth page
+ */
+if (is_active_sidebar($post->post_name .'_page_sidebar')) {
 	
-		<div class="inner-wrap grid">
-		
-			<?php if (is_active_sidebar(get_post($post->post_parent)->post_name .'_page_sidebar')) { ?>
-		
-				<div class="col-8">
-				
-					<?php get_page_loop(); ?>
-				
-				</div>
-				
-				<div class="col-4">
-					
-					<?php get_sidebar(); ?>
-					
-				</div>
-			
-			<?php } else { ?>
-			
-				<div class="col-12">
-				
-					<?php get_page_loop(); ?>
-				
-				</div>
-				
-			<?php } ?>
-		
-		</div>
-		
-	</div>
+	echo '<div class="column_left">';
 	
-<?php get_footer(); ?>
+		get_loop();
+	
+	echo '</div>
+	
+	<div class="column_right">';
+	
+		get_sidebar();
+		
+	echo '</div>';
+	
+} else {
+	
+	get_loop();
+	
+}
+
+/**
+ * Get the footer
+ */
+get_footer();
+	
+?>

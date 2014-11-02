@@ -1,49 +1,378 @@
 /*
-Theme Name: The Christian Crew
-Description: WordPress theme for The Christian Crew
-Version: 3.0
-Author: Keith Brinks
-Author URI: http://keithbrinks.com
+	Theme Name: The Christian Crew
+	Description: Theme for TheChristianCrew.com
+	Version: 3.0.0
+	Author: Keith Brinks & Drew Fletcher
+	Author URI: http://keithbrinks.com
 */
 
-@import url('global.css');
-			
 /**
- * Home Page
- */
-#home-introduction h2 {
-	margin-bottom: 15px;
-}
-
-/**
- * Widgets
+ * Sidebar & Widgets
  */
 .widget {
-	background-color: #ffffff;
-	color: #000000;
-	margin-bottom: 20px;
-	padding: 10px;
+	margin: 0 0 20px 20px;
 }
+ 
+	.widget h4 {
+		background: url(images/bg_widget_title.png) no-repeat;
+		height: 79px;
+		width: 321px;
+	}
 
-	.widget h3 {
+	.widget h4 span {
+		display: block;
+		height: 50px;
+		line-height: 50px;
 		text-align: center;
+	
 	}
 	
-	.widget h3 a {
-		color: #000000;
-		text-decoration: none;
+	.widget h4 a {
+		color: #ffffff;
 	}
 	
-	.widget_rss li {
+	.widget li {
 		list-style: none;
-		margin-bottom: 10px;
 	}
 	
-		.widget_rss li a {
+		.widget li a {
 			display: block;
+			padding: 5px 10px;
 		}
 
-.paypal_target_meter_widget {
-	background-color: #339933;
+	.widget_rss li {
+		margin: 0 0 10px 10px;
+	}
+	
+		.widget_rss li a, .quickupdate_widget.widget_recent_entries li a {
+			padding: 0;
+		}
+
+		
+/**
+ * Articles
+ */
+.post {
+	background-color: #505050;
+	border-top: 2px solid #2d91c7;
+	margin-bottom: 20px;
+	padding: 20px;
+}
+
+.post_title a {
 	color: #ffffff;
 }
+
+.meta {
+	font-size: 12px;
+	margin-bottom: 20px;
+}
+
+	.meta li {
+		display: inline;
+		list-style: none;
+		margin-right: 5px;
+		padding-left: 20px;
+	}
+	
+		.meta li a {
+			color: #ffffff;
+		}
+		
+		.meta li.post_date { background: url(images/icon_date.png) no-repeat; }
+		.meta li.post_author { background: url(images/icon_author.png) no-repeat; }
+		.meta li.post_category { background: url(images/icon_category.png) no-repeat; }
+		.meta li.post_comments { background: url(images/icon_comments.png) no-repeat; }
+		
+.entry ul, .entry ol {
+	margin: 0 0 10px 40px;
+}
+
+.entry img {
+	max-width: 100%;
+	height: auto;
+}
+
+.aligncenter		{ display:block; margin:0 auto }
+.alignleft			{ float:left }
+.alignright			{ float:right }
+.wp-caption			{ border:1px solid #666; text-align:center; background:#ccc; padding:10px; margin:10px }
+img.wp-smiley		{ border: none; padding: 0; }
+img.wp-smiley:hover	{ border: none; }
+
+
+/**
+ * Comments
+ */
+.commentlist ul, .commentlist ol {
+	margin: 0 0 10px 40px;
+}
+
+  
+/**
+ * WP-PageNavi Plugin
+ */
+.wp-pagenavi .pages {
+	display: none;
+}
+
+.wp-pagenavi span, .wp-pagenavi a {
+	color: #ffffff;
+	margin: 0 2px;
+	padding: 5px 10px;
+}
+
+.wp-pagenavi .current {
+	background-color: #000000;
+}
+
+.wp-pagenavi a {
+	background-color: #229de0;
+}
+
+.wp-pagenavi a:hover {
+	background-color: #48b5f0;
+	text-decoration: none;
+}
+
+/**
+ * Home Page
+ * Introduction
+ */
+#introduction {
+	overflow: hidden;
+}
+
+	.introduction_column_left {
+		float: left;
+		margin-right: 20px;
+		width: 510px;
+	}
+	
+	.introduction_column_right {
+		float: right;
+		width: 370px;
+	}
+	
+	/* Introduction Widgets */
+
+	.intro_widget {
+		margin: 0 0 20px;
+		padding: 10px;
+		width: 350px;
+	}
+	
+		.intro_widget.widget_em_widget {
+			background: url(images/bg_upcomingevents.png) no-repeat;
+			height: 102px;
+		}
+		
+		.intro_widget.widget_rss {
+			background: url(images/bg_wordoftheday.png) no-repeat;
+			height: 68px;
+		}
+
+		.intro_widget h4 {
+			background: none;
+			height: auto;
+			width: auto;
+		}
+		
+		.intro_widget li {
+			line-height: 1.2;
+			margin: 5px 0;
+			text-align: center;
+		}
+		
+			.intro_widget li a {
+				color: #ffffff;
+				display: inline;
+				padding: 0;
+			}
+			
+			.intro_widget li a:hover {
+				text-decoration: underline;
+			}
+			
+			.intro_widget li span {
+				color: #ffffff;
+				display: block;
+				font-size: 12px;
+			}
+
+/**
+ * Home Page
+ * Get Involved Section
+ */
+#get_involved {
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+	#get_involved li {
+		background: url(images/bg_action_btns.png) repeat-x;
+		border-radius: 5px;
+		display: block;
+		float: left;
+		list-style: none;
+		margin-bottom: 10px;
+		width: 445px;
+	}
+	
+	#get_involved li.left {
+		margin-right: 10px;
+	}
+	
+		#get_involved li a {
+			border: 1px solid #808080;
+			border-radius: 5px;
+			color: #ffffff;
+			display: block;
+			font-size: 20px;
+			font-weight: 600;
+			height: 40px;
+			padding: 15px 5px 15px 55px;
+			line-height: 1;
+		}
+		
+			#get_involved li a span {
+				color: #101010;
+				display: block;
+				font-size: 13px;
+				font-weight: normal;
+				margin-top: 5px;
+				text-shadow: 0 1px 0 rgba(255, 255, 255, .3);
+			}
+			
+		#get_involved li a:hover {
+			text-decoration: none;
+		}
+			
+		#get_involved li.play a { background: url(images/action_play.png) no-repeat -15px 50%; }
+		#get_involved li.play:hover { background-position: 0 -100px; }
+		
+		#get_involved li.chat a {background: url(images/action_chat.png) no-repeat -15px 50%; }
+		#get_involved li.chat:hover { background-position: 0 -200px; }
+		
+		#get_involved li.join a { background: url(images/action_join.png) no-repeat -15px 50%; }
+		#get_involved li.join:hover { background-position: 0 -300px; }
+		
+		#get_involved li.donate a { background: url(images/action_donate.png) no-repeat -15px 50%; }
+		#get_involved li.donate:hover { background-position: 0 -400px; }
+		
+		#get_involved li a:hover {
+			background-position: -12px 50%;
+		}
+		
+/**
+ * Home Page
+ * Banner Rotator
+ */
+#banner_rotator {
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+		
+/**
+ * Home Page
+ * Quick Updates Section
+ */
+#quickupdates {
+	overflow: hidden;
+}
+
+	.quickupdate_widget {
+		float: left;
+		margin: 0;
+		width: 294px;
+	}
+	
+			.quickupdate_widget h4 {
+				background: none;
+				color: #ffffff;
+				font-size: 1.2em;
+				height: auto;
+				margin-bottom: 10px;
+			}
+			
+				.quickupdate_widget h4 img {
+					display: none;
+				}
+	
+		.quickupdate_widget ul {
+			background-color: #505050;
+			padding: 10px 10px 99999px;
+			margin-bottom: -99999px;
+		}
+	
+			.quickupdate_widget li {
+				margin-bottom: 10px;
+			}
+			
+				.quickupdate_widget li span, .quickupdate_widget li cite {
+					font-size: 12px;
+					padding-left: 20px;
+				}
+				
+				.quickupdate_widget li span {
+					background: url(images/icon_date.png) no-repeat 0 50%;
+					margin-right: 5px;
+				}
+				
+				.quickupdate_widget li cite {
+					background: url(images/icon_author.png) no-repeat 0 50%;
+					font-style: normal;
+				}
+			
+		.quickupdate_widget.widget_recent_entries ul {
+			border-top: 2px solid #2d91c7;
+		}
+		
+		#rss-4 {
+			margin: 0 10px;
+		}
+		
+		#rss-4 ul {
+			border-top: 2px solid #75c72d;
+		}
+			
+		#rss-5 ul {
+			border-top: 2px solid #be2dc7;
+		}
+	
+/**
+ * Leaders Page
+ */
+ul.phpbb_list_group_members {
+	margin: 0 0 20px;
+	overflow: hidden;
+	padding: 0;
+}
+
+	ul.phpbb_list_group_members li {
+		background-color: #505050;
+		float: left;
+		line-height: 1.3;
+		list-style: none;
+		margin: 4px;
+		padding: 10px;
+		text-align: center;
+		width: 150px;
+	}
+	
+		ul.phpbb_list_group_members li img {
+			border-radius: 5px;
+			height: 80px;
+			width: 80px;
+		}
+		
+		ul.phpbb_list_group_members li a {
+			color: #ffffff;
+			font-size: 18px;
+		}
+		
+		ul.phpbb_list_group_members li p {
+			color: #dddddd;
+			font-size: 0.8em;
+			margin: 0;
+		}
