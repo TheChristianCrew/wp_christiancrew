@@ -1,62 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo('charset'); ?>" />
-	<?php if (is_search()) { ?>
-	   <meta name="robots" content="noindex, nofollow" /> 
-	<?php } ?>
-	<title>
-		<?php if (is_front_page()) {
-			echo bloginfo('name'); echo ' - '; echo bloginfo('description');
-		} elseif (is_404()) {
-			echo 'Page Not Found';
-		} elseif (is_archive()) {
-			echo 'Archive for '; wp_title(''); echo ' | '; echo bloginfo('name');
-		} elseif (is_search()) {
-			echo bloginfo('name'); echo 'Search Results for'; echo $_GET['s'];
-		} else {
-			echo wp_title(''); echo ' | '; echo bloginfo('name');
-		}
-		?>
-	</title>
-	<!--[if IE]>
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-	<link rel="stylesheet" href="http://localhost/sites/_thechristiancrew/theme/christiancrew_v2.2/global.css" type="text/css" />
-	<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" />
-	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-	<?php if ( is_singular() ) wp_enqueue_script( 'comment-reply' ); ?>
+
+	<!-- Page Setup -->
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+	<!-- Font Awesome -->
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<!-- WordPress Head Hook -->
 	<?php wp_head(); ?>
+
 </head>
 <body <?php body_class(); ?>>
 
-	<header id="ccgaming_site_header">
-	
-		<a id="ccgaming_site_banner" href="<?php bloginfo('url'); ?>"><img src="http://localhost/sites/_thechristiancrew/theme/christiancrew_v2.2/assets/img/site_banner.png" alt="Christian Crew Gaming - A faith based gaming community" /></a>
-		
-		<nav id="ccgaming_site_nav">
-			<?php wp_nav_menu(array('theme_location' => 'ccgaming_primary_site_nav')); ?>
-			<?php wp_nav_menu(array('theme_location' => 'ccgaming_secondary_site_nav', 'container_id' => 'ccgaming_secondary_site_nav')); ?>
-		</nav> <!-- /ccgaming_site_nav -->
-		
-		<nav id="ccgaming_social_links">
-			<li class="twitter"><a href="http://twitter.com/ccgamingonline">Twitter</a></li>
-			<li class="facebook"><a href="http://facebook.com/ccgaming">Facebook</a></li>
-			<li class="steam"><a href="http://steamcommunity.com/groups/christiancrewgaming">Steam</a></li>
-			<li class="rss"><a href="http://ccgaming.com/feed">RSS</a></li>
-		</nav> <!-- /ccgaming_social_links -->
-	
-	</header> <!-- /ccgaming_site_header -->
-	
-	<div id="ccgaming_site_subnav">
-		<?php
-		if (is_page('about') || $post->post_parent == '2') {
-			wp_nav_menu(array('theme_location' => 'about_sub_nav'));
-		} else if (is_home() || is_archive() || is_single()) {
-			wp_nav_menu(array('theme_location' => 'news_sub_nav'));
-		}
-		?>
-	</div><!-- /ccgaming_site_subnav -->
-	
-	<div id="ccgaming_site_container">
+	<header id="cc-site-header">
+
+		<div class="cc-inner-wrap">
+
+			<a id="cc-site-banner" href="<?php bloginfo('url'); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/cc-site-banner.png" alt="Christian Crew Gaming - A faith based gaming community" /></a>
+
+			<nav id="cc-site-nav">
+				<?php wp_nav_menu(array('theme_location' => 'primary_site_nav')); ?>
+			</nav>
+
+			<ul id="cc-social-links">
+				<li class="twitter"><a href="http://twitter.com/ccgamingonline"><i class="fa fa-twitter-square"></i></a></li>
+				<li class="facebook"><a href="http://facebook.com/ccgaming"><i class="fa fa-facebook-square"></i></a></li>
+				<li class="steam"><a href="http://steamcommunity.com/groups/christiancrewgaming"><i class="fa fa-steam-square"></i></a></li>
+				<li class="feed"><a href="http://forums.ccgaming.com/syndication.php?t=1&fid=82"><i class="fa fa-rss-square"></i></a></li>
+			</ul>
+
+		</div>
+
+	</header>

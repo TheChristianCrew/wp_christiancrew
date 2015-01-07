@@ -1,0 +1,173 @@
+/**
+ * Christian Crew Global Stylesheet - rev. 5
+ */
+
+@import url('k.css');
+
+body { font: 14px/1.5 arial; color: #eaeaea; background-color: #202020; }
+a:link, a:visited { color: #3fb7f8; text-decoration: none; outline: none; }
+a:hover { text-decoration: underline; }
+
+/**
+ * Main Layout Structure
+ */
+.cc-inner-wrap {
+	height: 100%;
+	margin: 0 auto;
+	width: 80%;
+	padding: 0 10px;
+	position: relative;
+}
+
+	@media screen and (max-width: 1200px) {
+		.cc-inner-wrap {
+			width: 90%;
+		}
+	}
+
+	@media screen and (max-width: 1000px) {
+		.cc-inner-wrap {
+			width: 100%;
+		}
+	}
+
+.cc-container {
+	background-color: #404040;
+	padding: 20px 0;
+}
+
+/**
+ * Site Header
+ */
+#cc-site-header {
+	background: url(../img/header-bg.png) repeat-x;
+	height: 170px;
+	padding-top: 20px;
+}
+
+	@media screen and (max-width: 767px) {
+		#cc-site-header {
+			height: 190px;
+			padding-top: 40px;
+		}
+	}
+
+	#cc-site-banner {
+		width: 493px;
+	}
+
+		#cc-site-banner img {
+			max-width: 100%;
+		}
+
+	#cc-site-nav {
+		position: absolute;
+			bottom: 0;
+	}
+
+		#cc-site-nav li {
+			float: left;
+			list-style: none;
+		}
+
+			#cc-site-nav li a {
+				color: #808080;
+				display: block;
+				font-size: 0.9em;
+				padding: 10px 10px 20px;
+				text-align: center;
+				text-transform: uppercase;
+			}
+
+			#cc-site-nav li a:hover {
+				color: #ffffff;
+				text-decoration: none;
+			}
+
+				#cc-site-nav li.current-menu-item a, #cc-site-nav li.current-page-ancestor a {
+					color: #ffffff;
+					position: relative;
+				}
+
+				#cc-site-nav li.current-menu-item a:before, #cc-site-nav li.current-page-ancestor a:before {
+					border: 15px solid transparent;
+					border-bottom-color: #5a83ad;
+					content: ' ';
+					margin-left: -15px;
+					position: absolute;
+						bottom: -1px; left: 50%;
+				}
+
+				#cc-site-nav li.current-menu-item a:after, #cc-site-nav li.current-page-ancestor a:after {
+					border: 14px solid transparent;
+					border-bottom-color: #336699;
+					content: ' ';
+					height: 0;
+					margin-left: -14px;
+					position: absolute;
+						bottom: -1px; left: 50%;
+					width: 0;
+				}
+
+	#cc-social-links {
+		position: absolute;
+			top: 0; right: 10px;
+	}
+
+		@media screen and (max-width: 767px) {
+			#cc-social-links {
+				top: -20px;
+			}
+		}
+
+		#cc-social-links li {
+			float: left;
+			list-style: none;
+			line-height: 0;
+			margin-left: 10px;
+		}
+
+			#cc-social-links li a {
+				color: #808080;
+				font-size: 2em;
+			}
+
+			#cc-social-links li a:hover {
+				color: #dddddd;
+			}
+
+/**
+ * Page Titles
+ */
+#cc-page-title {
+	background-color: #336699;
+	border-bottom: 1px solid rgba(0, 0, 0, .4);
+	border-top: 1px solid #5a83ad;
+	padding: 10px 0;
+}
+
+	#cc-page-title h1 {
+		font-weight: normal;
+		margin: 0;
+	}
+
+/**
+ * Site Footer
+ */
+#cc-site-footer {
+	border-top: 1px solid #505050;
+	padding: 20px 0;
+}
+
+/**
+ * Message Boxes
+ */
+.message_box {
+	color: #ffffff;
+	padding: 5px 5px 5px 25px;
+}
+
+.error {
+	background: #cc0000 url(../img/icon_error.png) no-repeat 5px 50%;
+	border: 1px solid #ff0000;
+}
