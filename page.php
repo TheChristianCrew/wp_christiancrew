@@ -10,21 +10,21 @@
 		<div class="cc-inner-wrap">
 			<h1><?php the_title(); ?></h1>
 	</section>
-	
+
 	<div class="cc-container">
-		
+
 		<div class="cc-inner-wrap grid">
-			
+
 			<?php if (is_active_sidebar(get_post($ancestors[0])->post_name .'_page_sidebar') || is_active_sidebar(get_post($ancestors[1])->post_name .'_page_sidebar')) : ?>
-		
+
 				<div class="col-4">
-					
+
 					<?php get_sidebar(); ?>
-					
-				</div>				
-				
-				<div class="col-8">
-					
+
+				</div>
+
+				<div class="col-8 has-sidebar">
+
 					<?php if (has_nav_menu(get_post($ancestors[0])->post_name .'_page_nav')) : ?>
 						<nav id="cc-page-nav">
 							<?php wp_nav_menu(array('theme_location' => get_post($ancestors[0])->post_name .'_page_nav')); ?>
@@ -34,23 +34,23 @@
 							<?php wp_nav_menu(array('theme_location' => get_post($ancestors[1])->post_name .'_page_nav')); ?>
 						</nav>
 					<?php endif; ?>
-				
+
 					<?php get_page_loop(); ?>
-				
+
 				</div>
-			
+
 			<?php else : ?>
-			
+
 				<div class="col-12">
-					
+
 					<?php get_page_loop(); ?>
-				
+
 				</div>
-				
-			<?php endif; ?>			
-			
+
+			<?php endif; ?>
+
 		</div>
-		
+
 	</div>
 
 <?php get_footer(); ?>
