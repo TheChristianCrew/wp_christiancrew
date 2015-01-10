@@ -9,20 +9,35 @@
 /**
  * Sidebar & Widgets
  */
-.widget_nav_menu li {
-	list-style: none;
+.widget_nav_menu {
+	border-right: 1px solid #606060;
+	padding: 10px 0;
 }
 
-	.widget_nav_menu li a {
-		display: block;
-		padding: 5px 0;
+	.widget_nav_menu li {
+		list-style: none;
 	}
 
-	.widget_nav_menu li a:hover, .widget_nav_menu li.current-menu-item a, .widget_nav_menu li.current-page-ancestor a {
-		color: #ffffff;
-		text-decoration: none;
-	}
+		.widget_nav_menu li a {
+			color: #999999;
+			display: block;
+			padding: 10px 0;
+		}
 
+		.widget_nav_menu li a:hover, .widget_nav_menu li.current-menu-item a, .widget_nav_menu li.current-page-ancestor a {
+			color: #ffffff;
+			text-decoration: none;
+		}
+
+		@media screen and (max-width: 767px) {
+
+			.widget_nav_menu {
+				border-bottom: 2px solid #606060;
+				border-right: 0;
+				padding: 0 0 10px;
+			}
+
+		}
 
 /**
  * Articles
