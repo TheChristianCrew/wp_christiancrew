@@ -36,7 +36,7 @@
 @media screen and (max-width: 767px) {
 
 	.widget_nav_menu {
-		border-bottom: 2px solid #606060;
+		border-bottom: 1px solid #606060;
 		border-right: 0;
 		padding: 0 0 10px;
 	}
