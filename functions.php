@@ -13,8 +13,7 @@ function theme_setup() {
 
 	// Register nav menu
 	register_nav_menus(array(
-		'primary_site_nav' => 'Primary Site Navigation',
-		'leadership_page_nav' => 'Leadership Page Nav'
+		'site_nav' => 'Site Nav',
 	));
 
 }
