@@ -9,25 +9,36 @@
 /**
  * Sidebar & Widgets
  */
-.widget_nav_menu {
+#sidebar {
 	border-right: 1px solid #606060;
 	padding: 10px 0;
 }
 
-	.widget_nav_menu li {
-		list-style: none;
+	#sidebar .widget {
+		border-top: 1px solid #606060;
+		margin-bottom: 10px;
+		padding: 10px 20px 0 0;
 	}
 
-		.widget_nav_menu li a {
-			color: #999999;
-			display: block;
-			padding: 10px 0;
+	#sidebar .widget.widget_nav_menu {
+		border-top: 0;
+		padding: 0;
+	}
+
+		.widget_nav_menu li {
+			list-style: none;
 		}
 
-		.widget_nav_menu li a:hover, .widget_nav_menu li.current-menu-item a, .widget_nav_menu li.current-page-ancestor a {
-			color: #ffffff;
-			text-decoration: none;
-		}
+			.widget_nav_menu li a {
+				color: #999999;
+				display: block;
+				padding: 10px 0;
+			}
+
+			.widget_nav_menu li a:hover, .widget_nav_menu li.current-menu-item a, .widget_nav_menu li.current-page-ancestor a {
+				color: #ffffff;
+				text-decoration: none;
+			}
 
 .has-sidebar {
 	padding: 20px 0;
@@ -35,7 +46,7 @@
 
 @media screen and (max-width: 767px) {
 
-	.widget_nav_menu {
+	#sidebar {
 		border-bottom: 1px solid #606060;
 		border-right: 0;
 		padding: 0 0 10px;
