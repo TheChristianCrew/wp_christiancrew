@@ -25,6 +25,10 @@
 		padding: 0;
 	}
 
+		.widget_nav_menu h3 {
+			margin: 0;
+		}
+
 		.widget_nav_menu li {
 			list-style: none;
 		}
