@@ -58,11 +58,11 @@
 						<h3>Get Involved</h3>
 
 						<ul class="cc-intro-links">
-							<li class="join"><a href="<?php bloginfo('url') ?>/join"><i class="fa fa-pencil"></i> Become A Member <span>Apply for CC Membership</span></a></li>
+							<li class="join"><a href="<?php bloginfo('url') ?>/getinvolved/membership"><i class="fa fa-pencil"></i> Become A Member <span>Apply for CC Membership</span></a></li>
 							<li class="play"><a href="<?php bloginfo('url') ?>/divisions"><i class="fa fa-gamepad"></i> Play <span>Find a game and play with us</span></a></li>
 							<li class="chat"><a href="http://forums.ccgaming.com"><i class="fa fa-comment"></i> Chat <span>Join the discussion on the forums</span></a></li>
-							<li class="donate"><a href="http://ccgaming.com/donate"><i class="fa fa-dollar"></i> Donate <span>Help us keep our servers online</span></a></li>
-							<li class="more"><a href="#"><i class="fa fa-arrow-right"></i> More <span>Find more ways to get involved!</span></a></li>
+							<li class="donate"><a href="<?php bloginfo('url') ?>/getinvolved/donate"><i class="fa fa-dollar"></i> Donate <span>Help us keep our servers online</span></a></li>
+							<li class="more"><a href="<?php bloginfo('url') ?>/getinvolved"><i class="fa fa-arrow-right"></i> More <span>Find more ways to get involved!</span></a></li>
 						</ul>
 
 					</div>
