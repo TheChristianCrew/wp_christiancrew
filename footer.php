@@ -1,11 +1,12 @@
 	<footer id="cc-site-footer">
-		
+
 		<div class="cc-inner-wrap">
-	
-			Footer
-	
+
+			<a class="cc-tag" href="<?php bloginfo('url'); ?>">&dagger;&lt;CC&gt;&lt; <?php bloginfo('name'); ?></a>
+			<a class="solideogloria-link" href="http://en.wikipedia.org/wiki/Soli_Deo_gloria" title="Glory to God Alone">Soli Deo Gloria</a>
+
 		</div>
-		
+
 	</footer>
 
 <?php wp_footer(); ?>

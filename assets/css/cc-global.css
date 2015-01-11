@@ -1,5 +1,5 @@
 /**
- * Christian Crew Global Stylesheet - rev. 5
+ * Christian Crew Global Stylesheet - rev. 6
  */
 
 @import url('k.css');
@@ -157,7 +157,21 @@ a:hover { text-decoration: underline; }
 #cc-site-footer {
 	border-top: 1px solid #505050;
 	padding: 20px 0;
+	overflow: hidden;
 }
+
+	a.solideogloria-link, a.cc-tag {
+		color: #505050;
+		font-style: italic;
+	}
+
+	a.solideogloria-link:hover, a.cc-tag:hover {
+		color: #808080;
+		text-decoration: none;
+	}
+
+	a.cc-tag { float: left; }
+	a.solideogloria-link { float: right }
 
 /**
  * Message Boxes
