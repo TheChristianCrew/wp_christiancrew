@@ -20,12 +20,32 @@ function theme_setup() {
 add_action('after_setup_theme', 'theme_setup');
 
 /**
+ * Custom URL getter
+ *
+ * Checks if our site is sitting on the live or dev server
+ * add returns the appropiate URL string
+ */
+function get_root_blog_url($root = false) {
+
+	$url = '';
+
+	if (site_url() == 'http://localhost/sites/thechristiancrew') {
+		$url = 'http://localhost/sites';
+	} else {
+		$url = site_url();
+	}
+
+	return $url;
+
+}
+
+/**
  * Enqueue scripts and styles
  */
 function theme_scripts_styles() {
 
 	// Load CC Global stylesheet
-	wp_enqueue_style('global-style', get_stylesheet_directory_uri() .'/assets/css/cc-global.css', false, '1.0');
+	wp_enqueue_style('global-style', get_root_blog_url() .'/cc-global-theme/v3/css/cc-global.css', false, '1.0');
 
 	// Load our main stylesheet
 	wp_enqueue_style('theme-style', get_stylesheet_uri(), false, '1.0');

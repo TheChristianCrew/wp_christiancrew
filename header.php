@@ -21,7 +21,7 @@
 
 		<div class="cc-inner-wrap">
 
-			<a id="cc-site-banner" href="<?php bloginfo('url'); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/cc-site-banner.png" alt="Christian Crew Gaming - A faith based gaming community" /></a>
+			<a id="cc-site-banner" href="<?php bloginfo('url'); ?>"><img src="<?php echo get_root_blog_url(); ?>/cc-global-theme/v3/img/cc-site-banner.png" alt="Christian Crew Gaming - A faith based gaming community" /></a>
 
 			<nav id="cc-site-nav">
 				<?php wp_nav_menu(array('theme_location' => 'primary_site_nav')); ?>
