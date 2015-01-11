@@ -292,40 +292,72 @@ img.wp-smiley:hover	{ border: none; }
 
 /**
  * Home Page
- * Announcements
+ * Mission Statement
  */
-#announcements h2 a {
-	color: #ffffff;
+#mission-statement {
+	background-color: #996633;
+	border-bottom: 1px solid rgba(0, 0, 0, .4);
+	border-right: 1px solid rgba(0, 0, 0, .4);
+	margin-bottom: 20px;
+	padding: 20px;
+	text-align: center;
 }
 
-	#announcements h2 a:nth-child(1) {
-		display: none;
+	#mission-statement h2 {
+		border-bottom: 1px solid #ad743a;
+		padding-bottom: 10px;
 	}
 
-#announcements li {
+	#mission-statement p {
+		font-style: italic;
+	}
+
+/**
+ * Home Page
+ * Announcements
+ */
+#announcements {
 	background-color: #505050;
 	border-bottom: 1px solid rgba(0, 0, 0, .4);
 	border-right: 1px solid rgba(0, 0, 0, .4);
-	border-top: 2px solid #ff9900;
-	list-style: none;
-	margin-bottom: 20px;
 	padding: 20px;
 }
 
-	#announcements li .rsswidget {
-		color: #ffffff;
-		font-size: 1.4em;
+	#announcements h2 {
+		border-bottom: 1px solid #606060;
+		padding-bottom: 10px;
+		text-align: center;
 	}
 
-	#announcements li .rss-date {
-		color: #c0c0c0;
-		display: block;
-		margin-bottom: 15px;
-	}
-
-		#announcements li .rss-date:before {
-			content: 'Posted on ';
+		#announcements h2 a {
+			color: #ffffff;
 		}
+
+			#announcements h2 a:nth-child(1) {
+				display: none;
+			}
+
+	#announcements li {
+		border-bottom: 1px dotted #606060;
+		list-style: none;
+		margin-bottom: 20px;
+		padding-bottom: 20px;
+	}
+
+		#announcements li .rsswidget {
+			color: #ffffff;
+			font-size: 1.4em;
+		}
+
+		#announcements li .rss-date {
+			color: #c0c0c0;
+			display: block;
+			margin-bottom: 15px;
+		}
+
+			#announcements li .rss-date:before {
+				content: 'Posted on ';
+			}
 
 /**
  * Leaders Page

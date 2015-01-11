@@ -24,6 +24,18 @@
 
 			<div class="col-8">
 
+				<section id="mission-statement">
+
+					<h2>Our Mission Statement</h2>
+
+					<p>We, the members of “The Christian Crew”, stand united in our effort to provide the online gaming community with a clean environment, of fellowship and exciting game play.</p>
+
+					<p>Our members will conduct themselves with integrity and decency, reflecting true Christian Character, in order that our Lord and Savior Jesus Christ might be honored and glorified.</p>
+
+					<p>We are committed to the ministry and growth of our community for the Kingdom of God, presenting the Gospel of Jesus Christ as the fundamental truth of God. Finally, we pledge to never forget that we are Christians first, and fellow gamers second.</p>
+
+				</section>
+
 				<section id="announcements">
 
 					<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('announcements')) : else : ?>
