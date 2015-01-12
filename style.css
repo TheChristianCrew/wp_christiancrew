@@ -186,23 +186,27 @@ img.wp-smiley:hover	{ border: none; }
 /**
  * Home Page - Intro
  */
-#cc-page-title.cc-home-intro h1 {
-	margin: 0 0 15px 0;
+#cc-page-title.cc-home-intro {
+	padding: 20px 0;
 }
 
-#cc-page-title.cc-home-intro p:last-of-type {
-	margin: 0;
-}
-
-.cc-home-intro .col-8 {
-	padding-right: 20px;
-}
-
-@media screen and (max-width: 767px) {
-	.cc-home-intro .col-8 {
-		padding: 0;
+	#cc-page-title.cc-home-intro h1 {
+		margin: 0 0 15px 0;
 	}
-}
+
+	#cc-page-title.cc-home-intro p:last-of-type {
+		margin: 0;
+	}
+
+		.cc-home-intro .col-8 {
+			padding-right: 20px;
+		}
+
+		@media screen and (max-width: 767px) {
+			.cc-home-intro .col-8 {
+				padding: 0;
+			}
+		}
 
 /**
  * Home Page - Sidebar
