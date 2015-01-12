@@ -65,38 +65,6 @@
 /**
  * Articles
  */
-.post {
-	background-color: #505050;
-	border-top: 2px solid #2d91c7;
-	margin-bottom: 20px;
-	padding: 20px;
-}
-
-.post_title a {
-	color: #ffffff;
-}
-
-.meta {
-	font-size: 12px;
-	margin-bottom: 20px;
-}
-
-	.meta li {
-		display: inline;
-		list-style: none;
-		margin-right: 5px;
-		padding-left: 20px;
-	}
-
-		.meta li a {
-			color: #ffffff;
-		}
-
-		.meta li.post_date { background: url(assets/imgs/icon_date.png) no-repeat; }
-		.meta li.post_author { background: url(assets/imgs/icon_author.png) no-repeat; }
-		.meta li.post_category { background: url(assets/imgs/icon_category.png) no-repeat; }
-		.meta li.post_comments { background: url(assets/imgs/icon_comments.png) no-repeat; }
-
 .entry ul, .entry ol {
 	margin: 0 0 10px 40px;
 }
@@ -112,41 +80,6 @@
 .wp-caption			{ border:1px solid #666; text-align:center; background:#ccc; padding:10px; margin:10px }
 img.wp-smiley		{ border: none; padding: 0; }
 img.wp-smiley:hover	{ border: none; }
-
-
-/**
- * Comments
- */
-.commentlist ul, .commentlist ol {
-	margin: 0 0 10px 40px;
-}
-
-
-/**
- * WP-PageNavi Plugin
- */
-.wp-pagenavi .pages {
-	display: none;
-}
-
-.wp-pagenavi span, .wp-pagenavi a {
-	color: #ffffff;
-	margin: 0 2px;
-	padding: 5px 10px;
-}
-
-.wp-pagenavi .current {
-	background-color: #000000;
-}
-
-.wp-pagenavi a {
-	background-color: #229de0;
-}
-
-.wp-pagenavi a:hover {
-	background-color: #48b5f0;
-	text-decoration: none;
-}
 
 /**
  * Page Nav
@@ -212,7 +145,7 @@ img.wp-smiley:hover	{ border: none; }
  * Home Page - Sidebar
  */
 .cc-home-sidebar {
-	margin-top: -200px;
+	margin-top: -260px;
 }
 
 	@media screen and (max-width: 767px) {
@@ -229,7 +162,7 @@ img.wp-smiley:hover	{ border: none; }
 
 		.cc-home-sidebar .widget h3 {
 			border-bottom: 1px solid #dddddd;
-			font-size: 1em;
+			font-size: 1rem;
 			letter-spacing: 2px;
 			margin: 0;
 			padding: 10px 0;
@@ -277,15 +210,14 @@ img.wp-smiley:hover	{ border: none; }
 			}
 
 			.cc-home-sidebar .widget .cc-intro-links li a {
-				font-size: 1.4em;
-				line-height: 1.2;
-				padding: 18px 10px 18px 80px;
+				font-size: 1.2rem;
+				padding: 15px 10px 15px 80px;
 				position: relative;
 			}
 
 				.cc-home-sidebar .widget .cc-intro-links li a i {
 					display: block;
-					font-size: 2em;
+					font-size: 3rem;
 					position: absolute;
 						left: 10px;
 					text-align: center;
@@ -295,7 +227,7 @@ img.wp-smiley:hover	{ border: none; }
 				.cc-home-sidebar .widget .cc-intro-links li a span {
 					color: #808080;
 					display: block;
-					font-size: .7em;
+					font-size: .9rem;
 				}
 
 			.cc-intro-links li.join a:hover { color: #cc6633; }
@@ -360,7 +292,7 @@ img.wp-smiley:hover	{ border: none; }
 
 		#announcements li .rsswidget {
 			color: #ffffff;
-			font-size: 1.4em;
+			font-size: 1.4rem;
 		}
 
 		#announcements li .rss-date {
