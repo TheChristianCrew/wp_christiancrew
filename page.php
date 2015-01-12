@@ -9,6 +9,7 @@
 	<section id="cc-page-title">
 		<div class="cc-inner-wrap">
 			<h1><?php the_title(); ?></h1>
+		</div>
 	</section>
 
 	<div class="cc-container">
