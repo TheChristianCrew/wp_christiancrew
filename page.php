@@ -18,12 +18,6 @@
 
 			<?php if (is_active_sidebar(get_post($ancestors[0])->post_name .'_page_sidebar') || is_active_sidebar(get_post($ancestors[1])->post_name .'_page_sidebar')) : ?>
 
-				<div class="col-4">
-
-					<?php get_sidebar(); ?>
-
-				</div>
-
 				<div class="col-8 has-sidebar">
 
 					<?php if (has_nav_menu(get_post($ancestors[0])->post_name .'_page_nav')) : ?>
@@ -37,6 +31,12 @@
 					<?php endif; ?>
 
 					<?php get_page_loop(); ?>
+
+				</div>
+
+				<div class="col-4">
+
+					<?php get_sidebar(); ?>
 
 				</div>
 
