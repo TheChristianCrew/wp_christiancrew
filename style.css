@@ -11,11 +11,13 @@
  */
 #sidebar {
 	border-left: 1px solid #606060;
-	padding: 10px 0 0 20px;
+	overflow: hidden;
+	padding-left: 20px;
 }
 
 	#sidebar .widget {
-		padding-bottom: 10px;
+		margin-bottom: 10px;
+		padding: 10px 0;
 	}
 
 		#sidebar .widget h3 {
@@ -26,16 +28,20 @@
 			list-style: none;
 		}
 
-		#sidebar .widget_nav_menu li a {
-			color: #808080;
-			display: block;
-			padding: 5px 0;
+		#sidebar .widget_nav_menu {
+			padding: 0;
 		}
 
-		#sidebar .widget_nav_menu li a:hover, #sidebar .widget_nav_menu li.current-menu-item a {
-			color: #ffffff;
-			text-decoration: none;
-		}
+			#sidebar .widget_nav_menu li a {
+				color: #999999;
+				display: block;
+				padding: 10px 0;
+			}
+
+			#sidebar .widget_nav_menu li a:hover, #sidebar .widget_nav_menu li.current-menu-item a {
+				color: #ffffff;
+				text-decoration: none;
+			}
 
 /* Add padding around page content when there's a sidebar */
 .has-sidebar {
