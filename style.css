@@ -12,7 +12,7 @@
 #sidebar {
 	border-left: 1px solid #606060;
 	overflow: hidden;
-	padding-left: 20px;
+	padding: 5px 0 0 20px;
 }
 
 	#sidebar .widget {
