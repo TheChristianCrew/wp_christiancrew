@@ -150,7 +150,7 @@ img.wp-smiley:hover	{ border: none; }
  * Home Page - Sidebar
  */
 .cc-home-sidebar {
-	margin-top: -260px;
+	margin-top: -200px;
 }
 
 	@media screen and (max-width: 767px) {
