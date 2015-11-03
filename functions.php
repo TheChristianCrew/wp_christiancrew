@@ -1,138 +1,123 @@
 <?php
 
 /**
- * Clean up the <head> section
+ * Setup our theme defaults
  */
-function removeHeadLinks() {
-	remove_action('wp_head', 'rsd_link');
-	remove_action('wp_head', 'wp_generator');
-	remove_action('wp_head', 'feed_links', 2);
-	remove_action('wp_head', 'index_rel_link');
-	remove_action('wp_head', 'wlwmanifest_link');
-	remove_action('wp_head', 'feed_links_extra', 3);
-	remove_action('wp_head', 'start_post_rel_link', 10, 0);
-	remove_action('wp_head', 'parent_post_rel_link', 10, 0);
-	remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
+function theme_setup() {
+
+	// Add feed links to <head>
+	add_theme_support('automatic-feed-links');
+
+	// Let WordPress handle document titles
+	add_theme_support('title-tag');
+
+	// Register nav menu
+	register_nav_menus(array(
+		'site_nav' => 'Site Nav',
+	));
+
 }
-add_action('init', 'removeHeadLinks');
+add_action('after_setup_theme', 'theme_setup');
 
 /**
- * Add support for the RSS feed in the <head> section
+ * Custom URL getter
+ *
+ * Checks if our site is sitting on the live or dev server
+ * add returns the appropiate URL string
  */
-add_theme_support('automatic-feed-links');
+function get_root_blog_url($root = false) {
 
-/**
- * Add support for custom post formats
- * http://codex.wordpress.org/Post_Formats
- */
-add_theme_support( 'post-formats', array( 'aside', 'link', 'image', 'quote', 'status', 'video' ) );
+	$url = '';
 
-/**
- * Load jQuery via Google
- */
-if( !is_admin()){
-   wp_deregister_script('jquery'); 
-   wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"), false, '1.4'); 
-   wp_enqueue_script('jquery');
+	if (site_url() == 'http://localhost/sites/thechristiancrew') {
+		$url = 'http://localhost/sites';
+	} else {
+		$url = site_url();
+	}
+
+	return $url;
+
 }
+
+/**
+ * Enqueue scripts and styles
+ */
+function theme_scripts_styles() {
+
+	// Load CC Global stylesheet
+	wp_enqueue_style('global-style', get_root_blog_url() .'/cc-global-theme/v3/css/cc-global.css', false, '1.0');
+
+	// Load our main stylesheet
+	wp_enqueue_style('theme-style', get_stylesheet_uri(), false, '1.0');
+
+}
+add_action('wp_enqueue_scripts', 'theme_scripts_styles');
 
 /**
  * Register dynamic sidebar(s)
  */
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
-		'name' => 'Introduction Widgets',
-		'id'   => 'introduction_widgets',
-		'description'   => 'These widgets get displayed to the right of the introduction on the home page.',
-		'before_widget' => '<div id="%1$s" class="widget intro_widget %2$s">',
+		'name' => 'Home Sidebar Widgets',
+		'id'   => 'home_sidebar_widgets',
+		'description'   => 'Home page sidebar widgets.',
+		'before_widget' => '<div class="widget">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>'
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>'
 	));
 	register_sidebar(array(
-		'name' => 'Quick Updates Sidebar',
-		'id'   => 'quickupdates_widgets',
-		'description'   => 'These widgets get displayed underneath the Get Involved section on the home page.',
-		'before_widget' => '<div id="%1$s" class="widget quickupdate_widget %2$s">',
+		'name' => 'Announcements',
+		'id'   => 'announcement_widgets',
+		'description'   => 'Announcement widgets.',
+		'before_widget' => '<div class="widget">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>'
+		'before_title'  => '<h2>',
+		'after_title'   => '</h2>'
 	));
 	register_sidebar(array(
-		'name' => 'Blog Sidebar',
-		'id'   => 'blog_sidebar',
-		'description'   => 'The front page and blog sidebar.',
+		'name' => 'Divisions Sidebar',
+		'id'   => 'divisions_page_sidebar',
+		'description'   => 'The Divisions page sidebar.',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4><span>',
-		'after_title'   => '</span></h4>'
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>'
 	));
 	register_sidebar(array(
-		'name' => 'Gaming Sidebar',
-		'id'   => 'gaming_page_sidebar',
-		'description'   => 'The Gaming page sidebar.',
+		'name' => 'Get Involved Sidebar',
+		'id'   => 'getinvolved_page_sidebar',
+		'description'   => 'The Get Involved page sidebar.',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4><span>',
-		'after_title'   => '</span></h4>'
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>'
 	));
 	register_sidebar(array(
-		'name' => 'Donate Sidebar',
-		'id'   => 'donate_page_sidebar',
-		'description'   => 'The Donate page sidebar.',
+		'name' => 'About Sidebar',
+		'id'   => 'about_page_sidebar',
+		'description'   => 'The About page sidebar.',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h4><span>',
-		'after_title'   => '</span></h4>'
-	));
-	register_sidebar(array(
-		'name' => 'Dispatch Sidebar',
-		'id'   => 'dispatch_page_sidebar',
-		'description'   => 'The Dispatch page sidebar.',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4><span>',
-		'after_title'   => '</span></h4>'
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>'
 	));
 }
 
 /**
- * Register nav menus
+ * Get page loop
  */
-function ccgaming_register_nav_menus() {
-	register_nav_menus(
-		array(
-			'ccgaming_primary_site_nav' => __('Primary Site Nav'),
-			'ccgaming_secondary_site_nav' => __('CCGaming Secondary Site Nav'),
-			'about_sub_nav' => __('About Page Sub Nav'),
-			'news_sub_nav' => __('News Page Sub Nav'),
-		)
-	);
-}
-add_action('init', 'ccgaming_register_nav_menus');
+function get_page_loop() {
 
-/**
- * Make some changes to the site navigational menu
- */
-function ccgaming_nav_menu_args($args = '') {
-	
-	// Make the home page selectable in the menu editor
-	$args['show_home'] = true;
-	
-	// Return the arguments
-	return $args;
-}
-add_filter( 'wp_page_menu_args', 'ccgaming_nav_menu_args' );
+	echo '<div class="entry">';
 
-/**
- * Get and display the theme's version
- */
-function get_theme_version() {
-	
-	$theme = wp_get_theme();
-	
-	echo 'v'. $theme->Version;
-	
-}
+	while ( have_posts() ) : the_post();
 
-?>
+		// Get the page content
+		the_content();
+
+	endwhile;
+
+	echo '</div>';
+
+}

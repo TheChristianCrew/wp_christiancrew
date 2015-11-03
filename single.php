@@ -1,35 +1,40 @@
-<?php get_header(); ?>
+<?php get_header() ?>
 
-	<div class="column_left">
-
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-			<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
-				
-				<h2><?php the_title(); ?></h2>
-				
-				<?php include (TEMPLATEPATH . '/inc/meta.php' ); ?>
-
-				<div class="entry">
+	<section id="cc-page-title">
+		<div class="cc-inner-wrap">
+			<h2><?php the_title(); ?></h2>
+	</section>
+	
+	<div class="cc-container">
+		
+		<div class="cc-inner-wrap grid">
+			
+			<?php if (is_active_sidebar(get_post($post->post_parent)->post_name .'_page_sidebar')) { ?>
+		
+				<div class="col-4">
 					
-					<?php the_content(); ?>
-
-					<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
-
-				</div> <!-- /entry -->
+					<?php get_sidebar(); ?>
+					
+				</div>				
 				
-			</article> <!-- /post_classes -->
-
-		<?php comments_template(); ?>
-
-		<?php endwhile; endif; ?>
+				<div class="col-8">
+				
+					<?php get_page_loop(); ?>
+				
+				</div>
+			
+			<?php } else { ?>
+			
+				<div class="col-12">
+				
+					<?php get_page_loop(); ?>
+				
+				</div>
+				
+			<?php } ?>			
+			
+		</div>
 		
-	</div> <!-- /column_left -->
-	
-	<div class="column_right">
-	
-		<?php get_sidebar(); ?>
-		
-	</div> <!-- /column_right -->
+	</div>
 
 <?php get_footer(); ?>

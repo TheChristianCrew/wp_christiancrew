@@ -1,16 +1,13 @@
-	</div> <!-- /ccgaming_site_container -->
-	
-	<footer id="ccgaming_site_footer">
-	
-		<div class="credits">
-			Site designed by <a href="http://www.drew-fletcher.com/">Drew Fletcher</a> &amp; <a href="http://keithbrinks.com">Keith Brinks</a> - 
-			<?php get_theme_version(); ?>
+	<footer id="cc-site-footer">
+
+		<div class="cc-inner-wrap">
+
+			<a class="cc-tag" href="<?php bloginfo('url'); ?>">&dagger;&lt;CC&gt;&lt; <?php bloginfo('name'); ?></a>
+			<a class="solideogloria-link" href="http://en.wikipedia.org/wiki/Soli_Deo_gloria" title="Glory to God Alone">Soli Deo Gloria</a>
+
 		</div>
-		
-		<a class="wp_link" href="http://wordpress.org" title="Proudly Powered by WordPress">Proudly powered by WordPress</a>
-		<a class="soli" href="http://en.wikipedia.org/wiki/Soli_Deo_gloria" title="Glory to God Alone">Soli Deo Gloria</a>
-	
-	</footer> <!-- /ccgaming_site_footer -->
+
+	</footer>
 
 <?php wp_footer(); ?>
 

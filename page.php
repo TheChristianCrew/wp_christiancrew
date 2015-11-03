@@ -1,64 +1,57 @@
-<?php
+<?php get_header() ?>
 
-/**
- * Place 'the loop' inside a function so we can reuse it
- */
-function get_loop() {
-	
-	if (have_posts()) : while (have_posts()) : the_post(); ?>
-		
-	<div class="page" id="post-<?php the_ID(); ?>">
+	<?php
+		// Get page ancestors
+		// Have to store in variable for PHP < 5.4
+		$ancestors = get_post_ancestors($post);
+	?>
 
-		<h1><?php the_title(); ?></h1>
+	<section id="cc-page-title">
+		<div class="cc-inner-wrap">
+			<h1><?php the_title(); ?></h1>
+		</div>
+	</section>
 
-		<div class="entry">
+	<div class="cc-container">
 
-			<?php the_content(); ?>
+		<div class="cc-inner-wrap grid">
 
-			<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
+			<?php if (is_active_sidebar(get_post($ancestors[0])->post_name .'_page_sidebar') || is_active_sidebar(get_post($ancestors[1])->post_name .'_page_sidebar')) : ?>
 
-		</div> <!-- /entry -->
+				<div class="col-8 has-sidebar">
 
-	</div> <!-- /page -->
+					<?php if (has_nav_menu(get_post($ancestors[0])->post_name .'_page_nav')) : ?>
+						<nav id="cc-page-nav">
+							<?php wp_nav_menu(array('theme_location' => get_post($ancestors[0])->post_name .'_page_nav')); ?>
+						</nav>
+					<?php elseif (has_nav_menu(get_post($ancestors[1])->post_name .'_page_nav')) : ?>
+						<nav id="cc-page-nav">
+							<?php wp_nav_menu(array('theme_location' => get_post($ancestors[1])->post_name .'_page_nav')); ?>
+						</nav>
+					<?php endif; ?>
 
-<?php endwhile; endif;
-	
-}
-	
-/**
- * Get the header
- */
-get_header();
+					<?php get_page_loop(); ?>
 
-/**
- * Check if the page has an active sidebar
- *
- * If yes, make the page multi-column
- * Otherwise make it a fullwidth page
- */
-if (is_active_sidebar($post->post_name .'_page_sidebar')) {
-	
-	echo '<div class="column_left">';
-	
-		get_loop();
-	
-	echo '</div>
-	
-	<div class="column_right">';
-	
-		get_sidebar();
-		
-	echo '</div>';
-	
-} else {
-	
-	get_loop();
-	
-}
+				</div>
 
-/**
- * Get the footer
- */
-get_footer();
-	
-?>
+				<div class="col-4">
+
+					<?php get_sidebar(); ?>
+
+				</div>
+
+			<?php else : ?>
+
+				<div class="col-12">
+
+					<?php get_page_loop(); ?>
+
+				</div>
+
+			<?php endif; ?>
+
+		</div>
+
+	</div>
+
+<?php get_footer(); ?>
