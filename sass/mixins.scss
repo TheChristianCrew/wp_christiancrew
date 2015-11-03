@@ -1,0 +1,27 @@
+/**
+ * Sass Mixins
+ */
+
+@mixin screen-lg {
+  @media (max-width: #{$width-lg}) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media (max-width: #{$width-md}) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media (max-width: #{$width-sm}) {
+    @content;
+  }
+}
+
+@mixin screen-xs {
+  @media (max-width: #{$width-xm}) {
+    @content;
+  }
+}

@@ -23,7 +23,7 @@ add_action('after_setup_theme', 'theme_setup');
  * Custom URL getter
  *
  * Checks if our site is sitting on the live or dev server
- * add returns the appropiate URL string
+ * add returns the appropriate URL string
  */
 function get_root_blog_url($root = false) {
 
@@ -44,11 +44,8 @@ function get_root_blog_url($root = false) {
  */
 function theme_scripts_styles() {
 
-	// Load CC Global stylesheet
-	wp_enqueue_style('global-style', get_root_blog_url() .'/cc-global-theme/v3/css/cc-global.css', false, '1.0');
-
 	// Load our main stylesheet
-	wp_enqueue_style('theme-style', get_stylesheet_uri(), false, '1.0');
+	wp_enqueue_style('theme-style', get_stylesheet_uri(), false, '3.1.0');
 
 }
 add_action('wp_enqueue_scripts', 'theme_scripts_styles');
@@ -102,22 +99,4 @@ if ( function_exists('register_sidebar') ) {
 		'before_title'  => '<h3>',
 		'after_title'   => '</h3>'
 	));
-}
-
-/**
- * Get page loop
- */
-function get_page_loop() {
-
-	echo '<div class="entry">';
-
-	while ( have_posts() ) : the_post();
-
-		// Get the page content
-		the_content();
-
-	endwhile;
-
-	echo '</div>';
-
 }

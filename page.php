@@ -30,7 +30,7 @@
 						</nav>
 					<?php endif; ?>
 
-					<?php get_page_loop(); ?>
+					<?php get_template_part('partials/page-loop.php') ?>
 
 				</div>
 
@@ -44,7 +44,7 @@
 
 				<div class="col-12">
 
-					<?php get_page_loop(); ?>
+					<?php get_template_part('partials/page-loop.php') ?>
 
 				</div>
 
