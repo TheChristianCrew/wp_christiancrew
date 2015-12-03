@@ -1,0 +1,29 @@
+/**
+ * This is the main Sass stylesheet. It does not (or should not) contains any
+ * actual styles, but rather imports all partials
+ */
+
+/**
+ * Import the required WordPress stylesheet header
+ * This MUST be included first!
+ */
+@import "wp";
+
+/**
+ * Import vendor stylesheets
+ * We include this second as we might need to overwrite any styles contained
+ * therein
+ */
+@import "vendor/normalize";
+
+/**
+ * Import utility stylesheets (variables, mixins, etc)
+ */
+@import "utilities/mixins";
+@import "utilities/variables";
+
+/**
+ * Finally, import the individual website component stylesheets
+ */
+@import "components/header";
+@import "components/footer";

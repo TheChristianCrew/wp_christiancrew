@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     sass: {
       buildStylesheet: {
         files: {
-          'style.css': 'sass/style.scss'
+          'style.css': 'scss/main.scss'
         }
       }
     },
@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         livereload: true
       },
       css: {
-        files: ['sass/*.scss'],
+        files: ['scss/*.scss', 'scss/components/*.scss', 'scss/utilities/*.scss', 'scss/vendor/*.scss'],
         tasks: ['sass', 'postcss', 'cssmin']
       }
     }
