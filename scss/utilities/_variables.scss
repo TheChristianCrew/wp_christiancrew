@@ -1,10 +1,16 @@
 /**
  * Configuration variables
  */
-$primary-color:          #336699;
-$primary-color-light:    #993399;
-$primary-color-lightest: #ffccff;
-$primary-color-dark:     #330033;
+$color-white:      #ffffff;
+$color-mine-shaft: #202020;
+$color-torch-red:  #FF1433;
+
+$header-background: $color-white;
+$header-height: 50px;
+
+$body-background:   $color-mine-shaft;
+
+$spacing: 40px;
 
 $screen-lg: 1024px;
 $screen-md: 768px;

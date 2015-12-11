@@ -1,0 +1,10 @@
+body {
+	background-color: $body-background;
+}
+
+.cc-inner-wrap {
+	position: relative;
+	max-width: $screen-lg;
+	margin: 0 auto;
+	padding: 0 10px;
+}

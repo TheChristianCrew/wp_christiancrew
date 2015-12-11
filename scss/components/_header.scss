@@ -1,3 +1,49 @@
 /**
  * Site Header
  */
+.cc-site-header {
+  height: $header-height;
+  margin-top: $spacing;
+  line-height: $header-height;
+  background-color: $header-background;
+  @include clearfix();
+}
+
+.cc-site-title {
+  position: absolute;
+  margin: 0;
+  a {
+    display: block;
+    width: 89px;
+    height: 50px;
+    text-indent: -9999px;
+    background: url('assets/img/logo.jpg') no-repeat;
+  }
+}
+
+.cc-site-nav {
+  display: table;
+  margin: 0 auto;
+  @include clearfix();
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+    float: left;
+    list-style: none;
+  }
+
+  a {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-torch-red;
+  }
+
+}
