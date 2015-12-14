@@ -41,9 +41,14 @@
     display: block;
     padding-left: 10px;
     padding-right: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
     color: $color-torch-red;
+    &:hover {
+      color: $color-tree-poppy;
+    }
   }
 
 }

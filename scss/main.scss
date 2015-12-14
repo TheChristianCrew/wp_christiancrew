@@ -10,6 +10,11 @@
 @import "wp";
 
 /**
+ * Import fonts
+ */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+/**
  * Import vendor stylesheets
  * We include this second as we might need to overwrite any styles contained
  * therein
