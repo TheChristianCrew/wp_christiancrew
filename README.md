@@ -7,6 +7,7 @@ Any changes to the theme should be done through this GitHub repository and NOT o
 ## Contributing
 
 Anyone can contribute to this theme in a couple different ways:
+
 1. Report issues or suggest changes by [creating a new issue](https://github.com/TheChristianCrew/wp_christiancrew/issues).
 1. Fix issues or make changes yourself by forking this repository and creating a [pull request](https://github.com/TheChristianCrew/wp_christiancrew/pulls).
 
