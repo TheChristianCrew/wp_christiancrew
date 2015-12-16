@@ -14,14 +14,14 @@ Anyone can contribute to this theme in a couple different ways:
 ## Prerequisites
 
 In order to make changes to the theme, you will need the following:
-1. Local web server
-  * [XAMPP](https://www.apachefriends.org/index.html) (Windows, Mac)
-  * [MAMP](https://www.mamp.info/en/) (Mac)
-1. [Git](https://git-scm.com/) (or [GitHub Desktop](https://desktop.github.com/))
-1. [NPM](https://www.npmjs.com/)
-1. [Grunt](http://gruntjs.com/)
-1. [Ruby](http://www.ruby-lang.org/en/downloads/)
-1. [Sass](http://sass-lang.com/install)
+* Local web server
+ * [XAMPP](https://www.apachefriends.org/index.html) (Windows, Mac)
+ * [MAMP](https://www.mamp.info/en/) (Mac)
+* [Git](https://git-scm.com/) (or [GitHub Desktop](https://desktop.github.com/))
+* [NPM](https://www.npmjs.com/)
+* [Grunt](http://gruntjs.com/)
+* [Ruby](http://www.ruby-lang.org/en/downloads/)
+* [Sass](http://sass-lang.com/install)
 
 In addition to the packages above installed, you will need knowledge in the following areas:
 1. HTML
