@@ -23,12 +23,10 @@
 }
 
 .cc-site-nav {
-  display: table;
-  margin: 0 auto;
+  margin-left: 109px;
   @include clearfix();
   @include bp(md) {
-    position: absolute;
-      top: 50px;
+    margin: 0;
     background-color: $color-torch-red;
     display: block;
     clip: rect(0 0 0 0);
@@ -71,15 +69,15 @@
 }
 
 .nav-toggle {
+  margin-left: 109px;
   display: none;
-  position: absolute;
-    left: 50%;
-  width: 100px;
-  margin-left: -50px;
-  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   color: $color-torch-red;
+  border: 1px solid $color-torch-red;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.9rem;
   font-weight: bold;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-touch-callout: none;
@@ -90,6 +88,10 @@
   user-select: none;
   @include bp(md) {
     display: inline;
+  }
+  &:hover {
+    color: $color-white;
+    background-color: $color-torch-red;
   }
 }
 
@@ -114,9 +116,12 @@
     color: $color-white;
     background-color: $color-emperor;
     padding: 4px 8px;
-    font: 12px arial;
+    font-size: 0.9rem;
     text-decoration: none;
     border-radius: 3px;
+    &:hover {
+      background-color: $color-mine-shaft;
+    }
   }
 
 }
