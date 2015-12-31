@@ -3,7 +3,7 @@
 /**
  * Setup our theme defaults
  */
-function theme_setup() {
+function wp_christiancrew_setup() {
 
 	// Add feed links to <head>
 	add_theme_support('automatic-feed-links');
@@ -17,7 +17,7 @@ function theme_setup() {
 	));
 
 }
-add_action('after_setup_theme', 'theme_setup');
+add_action('after_setup_theme', 'wp_christiancrew_setup');
 
 /**
  * Custom URL getter
@@ -40,15 +40,15 @@ function get_root_blog_url($root = false) {
 }
 
 /**
- * Enqueue scripts and styles
+ * Load scripts
  */
-function theme_scripts_styles() {
+function wp_christiancrew_scripts() {
 
 	// Load our main stylesheet
 	wp_enqueue_style('theme-style', get_stylesheet_uri(), false, '3.1.0');
 
 }
-add_action('wp_enqueue_scripts', 'theme_scripts_styles');
+add_action('wp_enqueue_scripts', 'wp_christiancrew_scripts');
 
 /**
  * Register dynamic sidebar(s)
