@@ -50,6 +50,9 @@ function wp_christiancrew_scripts() {
 	// Load main JavaScript file
 	wp_enqueue_script( 'cc-script', get_template_directory_uri() . '/assets/js/cc.min.js', array( 'jquery' ), '12312015', true );
 
+	// Load TSViewer
+	wp_enqueue_script( 'tsviewer', 'https://static.tsviewer.com/short_expire/js/ts3viewer_loader.js', '', true );
+
 }
 add_action('wp_enqueue_scripts', 'wp_christiancrew_scripts');
 
