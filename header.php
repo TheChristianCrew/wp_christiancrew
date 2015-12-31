@@ -9,18 +9,15 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-
 	<header class="cc-site-header">
 		<div class="cc-inner-wrap">
-			<?php
-				if ( is_front_page() && is_home() ) : ?>
-					<h1 class="cc-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else : ?>
+			<?php if ( is_front_page() && is_home() ) : ?>
+				<h1 class="cc-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
 					<p class="cc-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php endif;
-			?>
+			<?php endif; ?>
 			<nav class="cc-site-nav">
-				<?php wp_nav_menu(array('theme_location' => 'site_nav')); ?>
+				<?php wp_nav_menu( array( 'theme_location' => 'site_nav' ) ); ?>
 			</nav>
 		</div>
 	</header>

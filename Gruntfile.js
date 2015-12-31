@@ -40,6 +40,20 @@ module.exports = function(grunt) {
     },
 
     /**
+     * grunt-contrib-uglify
+     * https://github.com/gruntjs/grunt-contrib-uglify
+     *
+     * Minifies JavaScript
+     */
+     uglify: {
+       dist: {
+         files: {
+           'assets/js/cc.min.js': ['assets/js/vendor/*.js', 'assets/js/cc.js']
+         }
+       }
+     },
+
+    /**
      * grunt-contrib-watch
      * https://github.com/gruntjs/grunt-contrib-watch
      *
@@ -52,15 +66,19 @@ module.exports = function(grunt) {
       css: {
         files: ['scss/*.scss', 'scss/components/*.scss', 'scss/utilities/*.scss', 'scss/vendor/*.scss'],
         tasks: ['sass', 'postcss']
+      },
+      js: {
+        files: ['assets/js/vendor/*.js', 'assets/js/cc.js'],
+        tasks: ['uglify']
       }
     }
 
-    });
+  });
 
   // Automatically load all NPM tasks
   require('load-grunt-tasks')(grunt);
 
   // Register tasks
-  grunt.registerTask('default', ['sass', 'postcss']);
+  grunt.registerTask('default', ['sass', 'postcss', 'uglify']);
 
 }

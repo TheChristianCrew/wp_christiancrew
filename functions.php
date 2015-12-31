@@ -47,6 +47,9 @@ function wp_christiancrew_scripts() {
 	// Load our main stylesheet
 	wp_enqueue_style('theme-style', get_stylesheet_uri(), false, '4.0');
 
+	// Load main JavaScript file
+	wp_enqueue_script( 'cc-script', get_template_directory_uri() . '/assets/js/cc.min.js', array( 'jquery' ), '12312015', true );
+
 }
 add_action('wp_enqueue_scripts', 'wp_christiancrew_scripts');
 
