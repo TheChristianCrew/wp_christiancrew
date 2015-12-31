@@ -45,7 +45,7 @@ function get_root_blog_url($root = false) {
 function wp_christiancrew_scripts() {
 
 	// Load our main stylesheet
-	wp_enqueue_style('theme-style', get_stylesheet_uri(), false, '3.1.0');
+	wp_enqueue_style('theme-style', get_stylesheet_uri(), false, '4.0');
 
 }
 add_action('wp_enqueue_scripts', 'wp_christiancrew_scripts');
