@@ -96,3 +96,25 @@
 .nav-collapse.opened {
   max-height: 9999px;
 }
+
+.cc-connect-links {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+    top: 0;
+    right: 0;
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: $color-white;
+    background-color: $color-emperor;
+    padding: 4px 8px;
+    font: 12px arial;
+    text-decoration: none;
+    border-radius: 3px;
+  }
+
+}

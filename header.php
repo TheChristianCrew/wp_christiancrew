@@ -19,5 +19,8 @@
 			<nav class="cc-site-nav">
 				<?php wp_nav_menu( array( 'theme_location' => 'site_nav' ) ); ?>
 			</nav>
+			<ul class="cc-connect-links">
+				<li><a href="tsviewer.php" id="ts_btn" rel="modal:open"></a></li>
+			</ul>
 		</div>
 	</header>
