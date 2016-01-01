@@ -42,9 +42,9 @@ jQuery(document).ready(function($){
    $('#scene').parallax();
 
    // Get viewport size
-   /*$(window).resize(function() {
+   $(window).resize(function() {
      $('#scene').css( { 'width': $(this).width(), 'height': $(this).height() } );
    });
-   $(window).resize();*/
+   $(window).resize();
 
 });
