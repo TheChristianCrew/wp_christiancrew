@@ -127,3 +127,11 @@
   }
 
 }
+
+#ts_btn {
+  @include bp(md) {
+    span {
+      display: none;
+    }
+  }
+}

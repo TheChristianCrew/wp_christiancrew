@@ -24,7 +24,7 @@ jQuery(document).ready(function($){
     // Did we get a successfull connection?
     if (json.status == 'success') {
       var $ts_data = json.result;
-      $ts_btn.html($ts_data.users +' on TeamSpeak <i class="fa fa-headphones"></i>');
+      $ts_btn.html('<span>'+ $ts_data.users +' on TeamSpeak</span> <i class="fa fa-headphones"></i>');
     } else {
       $ts_btn.html('TS : Offline').addClass('offline');
     }
