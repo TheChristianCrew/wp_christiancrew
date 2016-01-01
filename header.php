@@ -9,6 +9,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+
 	<header class="cc-site-header">
 		<div class="cc-inner-wrap">
 			<?php if ( is_front_page() && is_home() ) : ?>

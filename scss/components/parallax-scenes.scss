@@ -1,0 +1,51 @@
+#scene {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+		top: -5%;
+		left: -5%;
+	li {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.scene-home .background {
+	background-image: url(assets/img/scene-home/background.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-position: fixed;
+	width: 110%;
+	height: 110%;
+}
+
+#scene.scene-home li .chopper {
+	background-image: url(assets/img/scene-home/chopper.jpg);
+	background-repeat: no-repeat;
+	background-size: 481px 145px;
+	width: 481px;
+	height: 145px;
+	position: absolute;
+		top: 30%;
+		left: 10%;
+	transition: background-size .2s;
+	@include bp(lg) { background-size: 380px 115px; }
+	@include bp(md) { background-size: 300px 90px; }
+	@include bp(sm) { background-size: 200px 60px; }
+}
+
+#scene.scene-home li .chopper-2 {
+	background-image: url(assets/img/scene-home/chopper.jpg);
+	background-repeat: no-repeat;
+	background-size: 481px 145px;
+	width: 481px;
+	height: 145px;
+	position: absolute;
+		top: 45%;
+		left: 50%;
+	transition: background-size .2s;
+	@include bp(lg) { background-size: 380px 115px; }
+	@include bp(md) { background-size: 300px 90px; }
+	@include bp(sm) { background-size: 200px 60px; }
+}

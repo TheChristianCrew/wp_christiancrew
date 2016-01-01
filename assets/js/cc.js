@@ -35,4 +35,16 @@ jQuery(document).ready(function($){
     type: 'inline'
   });
 
+  /**
+   * jQuery parallax effect
+   * https://github.com/wagerfield/parallax
+   */
+   $('#scene').parallax();
+
+   // Get viewport size
+   $(window).resize(function() {
+     $('#scene').css( { 'width': $(this).width(), 'height': $(this).height() } );
+   });
+   $(window).resize();
+
 });
