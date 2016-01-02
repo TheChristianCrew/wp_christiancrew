@@ -27,6 +27,7 @@
  */
 @import "utilities/mixins";
 @import "utilities/variables";
+@import "utilities/grid";
 
 /**
  * Finally, import the individual website component stylesheets
@@ -35,6 +36,7 @@
 @import "components/header";
 @import "components/footer";
 @import "components/parallax-scenes";
+@import "components/page-home";
 
 /**
  * Import our shameful stylesheet...

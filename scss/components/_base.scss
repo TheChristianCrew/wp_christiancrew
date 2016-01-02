@@ -1,11 +1,36 @@
-body {
-	background-color: $body-background;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
 	font: 16px/1.5 'Open Sans', arial;
 }
 
-.cc-inner-wrap {
+body {
+	background-color: $body-background;
+	color: $color-white;
+}
+
+.inner-wrap {
 	position: relative;
 	max-width: $screen-lg;
 	margin: 0 auto;
 	padding: 0 10px;
+}
+
+.page-wrap {
+	position: relative;
+	z-index: 100;
+	max-width: $screen-lg;
+	margin: 0 auto;
+	@include bp(lg) {
+		margin: 0 10px;
+	}
+}
+
+.page-container {
+	background-color: $container-background;
+	padding: 20px;
 }

@@ -10,17 +10,17 @@
 </head>
 <body <?php body_class(); ?>>
 
-	<header class="cc-site-header">
-		<div class="cc-inner-wrap">
+	<header class="site-header">
+		<div class="inner-wrap">
 			<?php if ( is_front_page() && is_home() ) : ?>
-				<h1 class="cc-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
-					<p class="cc-site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php endif; ?>
-			<nav class="cc-site-nav">
+			<nav class="site-nav">
 				<?php wp_nav_menu( array( 'theme_location' => 'site_nav' ) ); ?>
 			</nav>
-			<ul class="cc-connect-links">
+			<ul class="connect-links">
 				<li><a href="#tsviewer" id="ts_btn"><i class="fa fa-headphones"></i></a></li>
 				<li><a href="https://steamcommunity.com/groups/christiancrewgaming"><i class="fa fa-steam"></i></a></li>
 				<li><a href="https://twitter.com/ccgamingonline"><i class="fa fa-twitter"></i></a></li>

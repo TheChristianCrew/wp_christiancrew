@@ -6,7 +6,7 @@
  * Initiate responiveNav plugin
  * http://responsive-nav.com
  */
-var nav = responsiveNav(".cc-site-nav");
+var nav = responsiveNav(".site-nav");
 
 /**
  * Begin jQuery

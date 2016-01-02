@@ -2,17 +2,17 @@
  * Site Header
  */
 
-.cc-site-header {
+.site-header {
   position: relative;
+  z-index: 100;
   height: $header-height;
   margin-top: $spacing;
   line-height: $header-height;
   background-color: $header-background;
   @include clearfix();
-  z-index: 100;
 }
 
-.cc-site-title {
+.site-title {
   position: absolute;
   margin: 0;
   a {
@@ -24,7 +24,7 @@
   }
 }
 
-.cc-site-nav {
+.site-nav {
   margin-left: 109px;
   @include clearfix();
   @include bp(md) {
@@ -101,7 +101,7 @@
   max-height: 9999px;
 }
 
-.cc-connect-links {
+.connect-links {
   padding: 0;
   margin: 0;
   position: absolute;

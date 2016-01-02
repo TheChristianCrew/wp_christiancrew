@@ -2,6 +2,7 @@
  * Configuration variables
  */
 $color-white:      #ffffff;
+$color-black:      #000000;
 $color-mine-shaft: #202020;
 $color-emperor:    #505050;
 $color-torch-red:  #FF1433;
@@ -10,7 +11,8 @@ $color-tree-poppy: #FF9E1A;
 $header-background: $color-white;
 $header-height: 50px;
 
-$body-background:   $color-mine-shaft;
+$body-background:      $color-mine-shaft;
+$container-background: $color-emperor;
 
 $spacing: 40px;
 

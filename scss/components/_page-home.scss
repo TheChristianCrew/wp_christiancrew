@@ -1,0 +1,17 @@
+/**
+ * Home page specific styles
+ */
+.home-intro {
+	margin-top: 200px;
+	p {
+		text-align: right;
+		font-weight: bold;
+		font-size: 1.2rem;
+	}
+}
+
+.home-container {
+	background-color: $color-white;
+	color: $color-black;
+	margin-top: ($spacing/2);
+}
