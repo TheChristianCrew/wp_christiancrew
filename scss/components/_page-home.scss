@@ -3,10 +3,20 @@
  */
 .home-intro {
 	margin-top: 200px;
+	@include clearfix;
+	.home-intro-inner {
+		max-width: 500px;
+		float: right;
+	}
+	h2 {
+		text-align: right;
+		@include bp(sm) { font-size: 1.1rem; }
+	}
 	p {
 		text-align: right;
 		font-weight: bold;
 		font-size: 1.2rem;
+		@include bp(sm) { font-size: .9rem; }
 	}
 }
 
