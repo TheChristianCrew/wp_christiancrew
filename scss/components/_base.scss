@@ -22,7 +22,7 @@ body {
 
 .page-wrap {
 	position: relative;
-	z-index: 100;
+	z-index: 99;
 	max-width: $screen-lg;
 	margin: 0 auto;
 	@include bp(lg) {
