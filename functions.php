@@ -1,5 +1,8 @@
 <?php
 
+require_once(get_stylesheet_directory() .'/includes/class-divisions.php');
+$CC_Divisions = new CC_Divisions();
+
 /**
  * Setup our theme defaults
  */
