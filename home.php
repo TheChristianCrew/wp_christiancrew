@@ -8,7 +8,17 @@
 		</div>
 	</div>
 	<div class="page-container home-container">
-		News blurb
+		<?php
+			$divisions = new WP_Query( array( 'post_type' => 'cc_divisions' ) );
+			while ( $divisions->have_posts() ) : $divisions->the_post();
+		?>
+			<div class="division-thumb grid-4-4">
+				<a href="<?php the_permalink(); ?>">
+					<?php the_post_thumbnail( 'division-thumb' ); ?>
+					<?php the_title(); ?>
+				</a>
+			</div>
+		<?php endwhile; ?>
 	</div>
 </div>
 
