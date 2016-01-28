@@ -34,14 +34,3 @@ body {
 	background-color: $container-background;
 	padding: 20px;
 }
-
-.page-title {
-	display: inline-block;
-	padding: 0 10px;
-	margin: 0 0 ($spacing / 2) 0;
-	font-size: 1.6rem;
-	line-height: normal;
-	text-transform: uppercase;
-	color: $color-torch-red;
-	background-color: $color-white;
-}
