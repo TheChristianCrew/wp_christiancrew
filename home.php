@@ -8,7 +8,9 @@
 		</div>
 	</div>
 	<div class="page-container home-container">
-		<?php do_action( 'cc_list_divisions' ); ?>
+		<div class="divisions_list grid no-margin">
+			<?php do_action( 'cc_list_divisions' ); ?>
+		</div>
 	</div>
 </div>
 
