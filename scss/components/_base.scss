@@ -26,7 +26,7 @@ body {
 	max-width: $screen-lg;
 	margin: ($spacing * 2) auto $spacing;
 	@include bp(lg) {
-		margin: 0 10px;
+		margin: $spacing 10px 10px;
 	}
 }
 
