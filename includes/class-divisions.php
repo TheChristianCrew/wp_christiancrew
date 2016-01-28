@@ -13,6 +13,7 @@ class CC_Divisions {
         add_action( 'init', array( $this, 'create_post_type' ) );
         add_action( 'add_meta_boxes', array( $this, 'add_details_meta_box' ) );
         add_action( 'admin_head', array( $this, 'details_meta_box_css' ) );
+        add_action( 'cc_list_divisions', array( $this, 'list_divisions' ) );
 
     }
 
@@ -102,6 +103,26 @@ class CC_Divisions {
             </style>
 
         <?php }
+
+    }
+
+    /**
+     * Lists divisions
+     */
+    function list_divisions() {
+
+      // Query the divisions post type
+			$divisions = new WP_Query( array( 'post_type' => 'cc_divisions' ) );
+
+      // List the divisions
+			while ( $divisions->have_posts() ) : $divisions->the_post(); ?>
+				<div class="division-thumb grid-4-4">
+					<a href="<?php the_permalink(); ?>">
+						<?php the_post_thumbnail( 'division-thumb' ); ?>
+						<?php the_title(); ?>
+					</a>
+				</div>
+			<?php endwhile;
 
     }
 
