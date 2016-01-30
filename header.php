@@ -21,7 +21,7 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'site_nav' ) ); ?>
 			</nav>
 			<ul class="connect-links">
-				<li><a href="#tsviewer" id="ts_btn"><i class="fa fa-headphones"></i></a></li>
+				<li><a href="<?php echo get_template_directory_uri(); ?>/tsviewer.php" id="ts_btn"><i class="fa fa-headphones"></i></a></li>
 				<li><a href="https://steamcommunity.com/groups/christiancrewgaming"><i class="fa fa-steam"></i></a></li>
 				<li><a href="https://twitter.com/ccgamingonline"><i class="fa fa-twitter"></i></a></li>
 				<li><a href="https://facebook.com/ccgaming"><i class="fa fa-facebook"></i></a></li>
