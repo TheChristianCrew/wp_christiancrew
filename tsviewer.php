@@ -25,6 +25,6 @@ if ( isset( $_GET['ts'] ) && $_GET['ts'] ) {
 } else {
   // 'ts' is not set -- call this file again inside an iframe with 'ts' set to true
   echo '<div id="ts-popup" class="white-popup">
-    <iframe src="'. $_SERVER['PHP_SELF'] .'?ts=true" width="100%" height="512px" style="border:0;"></iframe>
+    <iframe src="'. $_SERVER['PHP_SELF'] .'?ts=true" width="100%" height="400px" style="border:0;"></iframe>
   </div>';
 }
