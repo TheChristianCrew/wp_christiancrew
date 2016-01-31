@@ -1,0 +1,25 @@
+/**
+ * Division lists
+ */
+.divisions_list {
+  line-height: 1;
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: $color-torch-red;
+    text-transform: uppercase;
+
+    span {
+      display: block;
+      padding-left: 5px;
+      padding-bottom: 5px;
+    }
+
+    &:hover {
+      background-color: $color-mine-shaft-dark;
+      color: $color-white;
+    }
+
+  }
+}

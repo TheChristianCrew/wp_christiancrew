@@ -13,7 +13,10 @@ function wp_christiancrew_setup() {
 
 	// Let WordPress handle document titles
 	add_theme_support('title-tag');
+
+	// Add support for featured images to the cc_divisions post type
 	add_theme_support( 'post-thumbnails', array( 'cc_divisions' ) );
+	add_image_size( 'division-thumb', 246, 138, true );
 
 	// Register nav menu
 	register_nav_menus(array(

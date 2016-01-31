@@ -3,23 +3,16 @@
  * https://css-tricks.com/dont-overthink-it-grids/
  */
 .grid {
-  margin: 0 0 $spacing 0;
-  &:after {
-    @include clearfix();
-  }
-  &.no-margin {
-    margin: 0;
-  }
+  padding: 20px 0 20px 20px;
+  @include clearfix();
 }
 
-[class*='col-'] {
+[class*='grid-'] {
     float: left;
-    padding-right: $spacing;
-    &:last-of-type {
-      padding-right: 0;
-    }
+    padding-right: 20px;
 }
 
 .grid-1-4 {
   width: 25%;
+  float: left;
 }

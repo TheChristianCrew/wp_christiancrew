@@ -8,7 +8,8 @@
 		</div>
 	</div>
 	<div class="page-container home-container">
-		<div class="divisions_list grid no-margin">
+		<div class="divisions_list grid">
+			<h2>Current Divisions</h2>
 			<?php do_action( 'cc_list_divisions' ); ?>
 		</div>
 	</div>

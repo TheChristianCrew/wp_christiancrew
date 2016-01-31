@@ -119,7 +119,7 @@ class CC_Divisions {
 				<div class="grid-1-4">
 					<a href="<?php the_permalink(); ?>">
 						<?php the_post_thumbnail( 'division-thumb' ); ?>
-						<?php the_title(); ?>
+						<span><?php the_title(); ?></span>
 					</a>
 				</div>
 			<?php endwhile;
