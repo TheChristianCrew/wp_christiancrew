@@ -32,7 +32,6 @@ class CC_Divisions {
                     'not_found'     => __( 'No divisions found.', 'cc-divisions-textdomain' ),
                 ),
                 'public' => true,
-                'has_archive' => false,
                 'rewrite' => array('slug' => 'division'),
                 'supports' => array('title', 'editor', 'thumbnail'),
             )
