@@ -33,7 +33,7 @@ class CC_Divisions {
                 ),
                 'public' => true,
                 'rewrite' => array('slug' => 'division'),
-                'supports' => array('title', 'editor', 'thumbnail'),
+                'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
             )
         );
 
