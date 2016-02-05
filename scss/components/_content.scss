@@ -185,3 +185,13 @@
 
   }
 }
+
+.page-template-page-divisions .divisions_list {
+  a {
+    background-color: $color-white;
+    &:hover {
+      background-color: $color-red;
+      color: $color-white;
+    }
+  }
+}
