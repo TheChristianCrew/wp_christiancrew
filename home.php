@@ -7,7 +7,7 @@
 			<p>Our mission is to be a gaming community that provides a clean environment, great fellowship, and exciting gameplay.</p>
 		</div>
 	</div>
-	<div class="page-container home-container">
+	<div class="home-container">
 		<div class="grid">
 			<?php if ( is_active_sidebar( 'home-widgets' ) ) : ?>
 				<?php dynamic_sidebar( 'home-widgets' ); ?>
