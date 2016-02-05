@@ -68,6 +68,57 @@
 /**
  * Widget buttons
  */
+ .ts-widget .ts-btn {
+   position: relative;
+   display: block;
+   text-decoration: none;
+   text-align: right;
+   text-transform: uppercase;
+   background-color: $color-mine-shaft-light;
+   color: $color-white;
+   padding: 10px;
+   font-size: .8rem;
+   font-weight: 700;
+   line-height: 1;
+   min-height: 82px;
+   em {
+     font-size: 2rem;
+     display: block;
+   }
+   .overlay {
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     display: none;
+     padding: 10px;
+     text-align: left;
+     text-transform: none;
+     font-weight: normal;
+     strong {
+       text-transform: uppercase;
+     }
+     .server-details {
+       position: absolute;
+       left: 0;
+       bottom: 0;
+       background-color: $color-white;
+       color: $primary-color;
+       width: 75%;
+       font-weight: 400;
+       padding: 5px;
+     }
+     .download-ts {
+       position: absolute;
+     }
+  }
+  &:hover .overlay {
+    background-color: $primary-color;
+    display: block;
+  }
+}
+
 .forums-btn a {
   display: block;
   position: relative;
@@ -77,8 +128,18 @@
   text-decoration: none;
   font-size: .9rem;
   color: $color-red;
-  @include bp (lg) {
-    padding-left: 80px;
+  min-height: 82px;
+  @include bp(lg) {
+    padding-left: 60px;
+    font-size: .7rem;
+  }
+  @include bp(md) {
+    padding-left: 90px;
+    font-size: .9rem;
+  }
+  @include bp(sm) {
+    padding-left: 60px;
+    font-size: .7em;
   }
   i {
     position: absolute;
@@ -87,7 +148,7 @@
     color: $color-silver;
     font-size: 5rem;
     @include bp (lg) {
-      font-size: 4rem;
+      font-size: 3.2rem;
     }
   }
   &:hover {
@@ -95,59 +156,6 @@
     color: $color-white;
     i {
       color: $color-red;
-    }
-  }
-}
-
-.ts-widget {
-  position: relative;
-  .ts-btn {
-    display: block;
-    text-decoration: none;
-    text-align: right;
-    text-transform: uppercase;
-    background-color: $color-mine-shaft-light;
-    color: $color-white;
-    padding: 10px;
-    font-size: .8rem;
-    font-weight: 700;
-    line-height: 1;
-    em {
-      font-size: 2rem;
-      display: block;
-    }
-    .overlay {
-      position: absolute;
-      top: 0;
-      right: 20px;
-      bottom: 0;
-      left: 0;
-      display: none;
-      padding: 10px;
-      text-align: left;
-      text-transform: none;
-      font-weight: normal;
-      span {
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-      .server-details {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-color: $color-white;
-        color: $primary-color;
-        width: 50%;
-        font-weight: 400;
-        padding: 5px;
-      }
-      .download-ts {
-        position: absolute;
-      }
-    }
-    &:hover .overlay {
-      background-color: $primary-color;
-      display: block;
     }
   }
 }

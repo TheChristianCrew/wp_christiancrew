@@ -21,9 +21,9 @@ class TS_BTN extends WP_Widget {
       <a href="<?php echo get_template_directory_uri(); ?>/tsviewer.php" class="ts-btn">
         <em class="ts-users">-</em> people on<br /> TeamSpeak
         <div class="overlay">
-          <span>Server IP:</span> ts.ccgaming.com<br />
-          <span>Password:</span> none
-          <span class="server-details">Server Details</span>
+          <strong>Server IP:</strong> ts.ccgaming.com<br />
+          <strong>Password:</strong> none
+          <strong class="server-details">Server Details</strong>
         </div>
       </a>
     </div>
