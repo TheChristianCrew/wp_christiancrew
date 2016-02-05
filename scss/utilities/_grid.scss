@@ -3,8 +3,11 @@
  * https://css-tricks.com/dont-overthink-it-grids/
  */
 .grid {
-  padding: 20px 0 20px 20px;
+  padding: 20px 0 0 20px;
   @include clearfix();
+  &:last-of-type {
+    padding-bottom: 20px;
+  }
 }
 
 [class*='grid-'] {
@@ -14,11 +17,18 @@
 
 .grid-1-4 {
   width: 25%;
-  float: left;
   @include bp(md) {
     width: 50%;
     &:nth-of-type(1), &:nth-of-type(2) {
       margin-bottom: 20px;
     }
+  }
+}
+
+.grid-2-4 {
+  width: 50%;
+  @include bp(md) {
+    width: 100%;
+    margin-bottom: 20px;
   }
 }

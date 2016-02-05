@@ -128,7 +128,10 @@
 
 }
 
-#ts_btn {
+.ts-btn {
+  em {
+    font-style: normal;
+  }
   @include bp(md) {
     span {
       display: none;

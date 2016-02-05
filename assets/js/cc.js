@@ -19,19 +19,19 @@ jQuery(document).ready(function($){
    */
   $.getJSON('https://api.planetteamspeak.com/serverstatus/ts.ccgaming.com/', function(json) {
 
-    var $ts_btn = $('#ts_btn');
+    var $ts_users = $('.ts-users');
 
     // Did we get a successfull connection?
     if (json.status == 'success') {
       var $ts_data = json.result;
-      $ts_btn.html('<span>'+ $ts_data.users +' on TeamSpeak</span> <i class="fa fa-headphones"></i>');
+      $ts_users.html($ts_data.users);
     } else {
-      $ts_btn.html('TS : Offline').addClass('offline');
+      $ts_users.html('TS : Offline').addClass('offline');
     }
 
   });
 
-  $('#ts_btn').magnificPopup({
+  $('.ts-btn').magnificPopup({
     type: 'ajax'
   });
 

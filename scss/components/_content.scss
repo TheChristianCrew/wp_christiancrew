@@ -1,4 +1,158 @@
 /**
+ * Announcements
+ */
+.announcement {
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  a {
+    display: block;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 82px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: $color-white;
+    transform: translateY(100%);
+    transition: transform .35s ease-out;
+    span {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      color: $color-red;
+      font-weight: 700;
+      font-size: .9rem;
+      text-transform: uppercase;
+      transition: opacity .35s ease-out;
+    }
+  }
+  &:hover .overlay {
+    transform: translateY(0);
+  }
+  h3 {
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 1rem;
+    transform: translateY(calc(-100%));
+    transition: transform .35s ease-out;
+  }
+  &:hover h3 {
+    transform: translateY(0);
+  }
+  p {
+    padding: 0 10px;
+    margin-top: -5px;
+  }
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    transition: background .35s ease-out;
+  }
+  &:hover:before {
+    background-color: rgba(0, 0, 0, .8);
+  }
+}
+
+/**
+ * Widget buttons
+ */
+.forums-btn a {
+  display: block;
+  position: relative;
+  padding: 10px 10px 10px 90px;
+  text-align: right;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .9rem;
+  color: $color-red;
+  @include bp (lg) {
+    padding-left: 80px;
+  }
+  i {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color: $color-silver;
+    font-size: 5rem;
+    @include bp (lg) {
+      font-size: 4rem;
+    }
+  }
+  &:hover {
+    background-color: $color-mine-shaft-dark;
+    color: $color-white;
+    i {
+      color: $color-red;
+    }
+  }
+}
+
+.ts-widget {
+  position: relative;
+  .ts-btn {
+    display: block;
+    text-decoration: none;
+    text-align: right;
+    text-transform: uppercase;
+    background-color: $color-mine-shaft-light;
+    color: $color-white;
+    padding: 10px;
+    font-size: .8rem;
+    font-weight: 700;
+    line-height: 1;
+    em {
+      font-size: 2rem;
+      display: block;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      right: 20px;
+      bottom: 0;
+      left: 0;
+      display: none;
+      padding: 10px;
+      text-align: left;
+      text-transform: none;
+      font-weight: normal;
+      span {
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .server-details {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: $color-white;
+        color: $primary-color;
+        width: 50%;
+        font-weight: 400;
+        padding: 5px;
+      }
+      .download-ts {
+        position: absolute;
+      }
+    }
+    &:hover .overlay {
+      background-color: $primary-color;
+      display: block;
+    }
+  }
+}
+
+/**
  * Division lists
  */
 .divisions_list {
@@ -7,7 +161,7 @@
   a {
     display: block;
     text-decoration: none;
-    color: $color-torch-red;
+    color: $color-red;
     text-transform: uppercase;
 
     span {
