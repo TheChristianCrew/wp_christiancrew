@@ -23,7 +23,7 @@ class CC_Divisions {
     function create_post_type() {
 
         register_post_type(
-            'cc_divisions',
+            'divisions',
             array(
                 'labels' => array(
                     'name'          => __( 'Divisions' ),
@@ -45,10 +45,10 @@ class CC_Divisions {
     function add_details_meta_box() {
 
     	add_meta_box(
-    		'cc_divisions_details',
+    		'division_details',
     		__( 'Division Details', 'cc-divisions-textdomain' ),
     		array( $this, 'details_meta_box_callback' ),
-    		'cc_divisions'
+    		'divisions'
     	);
 
     }
@@ -61,7 +61,7 @@ class CC_Divisions {
     function details_meta_box_callback( $post ) {
 
         // Add a nonce field so we can check for it later.
-    	wp_nonce_field( 'cc_division_details_data', 'cc_division_details_nonce' );
+    	wp_nonce_field( 'division_details_data', 'division_details_nonce' );
 
     	/*
     	 * Retrieve existing data (if any) from database
@@ -93,7 +93,7 @@ class CC_Divisions {
      */
     function details_meta_box_css() {
 
-        if ( $_GET['post_type'] == 'cc_divisions' ) { ?>
+        if ( $_GET['post_type'] == 'divisions' ) { ?>
 
             <style type="text/css">
 
@@ -111,7 +111,7 @@ class CC_Divisions {
     function list_divisions() {
 
       // Query the divisions post type
-			$divisions = new WP_Query( array( 'post_type' => 'cc_divisions' ) );
+			$divisions = new WP_Query( array( 'post_type' => 'divisions' ) );
 
       // List the divisions
 			while ( $divisions->have_posts() ) : $divisions->the_post(); ?>
