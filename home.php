@@ -15,7 +15,7 @@
 		</div>
 		<div class="divisions_list grid">
 			<h2>Current Divisions</h2>
-			<?php do_action( 'cc_list_divisions' ); ?>
+			<?php do_action( 'cc_get_division_list' ); ?>
 		</div>
 	</div>
 </div>

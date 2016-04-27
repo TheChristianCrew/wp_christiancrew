@@ -16,7 +16,7 @@ get_header() ?>
 			  <?php get_template_part('partials/page', 'loop') ?>
       </div>
       <div class="divisions_list">
-        <?php do_action( 'cc_list_divisions' ); ?>
+        <?php do_action( 'cc_get_division_list' ); ?>
       </div>
 		</div>
 

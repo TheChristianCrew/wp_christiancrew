@@ -15,9 +15,9 @@ get_header() ?>
       <div class="grid-4-4">
 			  <?php get_template_part('partials/page', 'loop') ?>
       </div>
-      <div class="divisions_list">
-        <?php do_action( 'cc_list_divisions' ); ?>
-      </div>
+			<div>
+				<?php echo do_shortcode( '[phpbb-list-members users="'. get_post_meta( $post->ID, '_division_leader_ids', true ) .'"]' ); ?>
+			</div>
 		</div>
 
 	</article>

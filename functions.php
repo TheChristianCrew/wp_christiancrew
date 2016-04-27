@@ -1,5 +1,7 @@
 <?php
 
+require_once( get_stylesheet_directory() .'/includes/class-phpbb.php');
+require_once( get_stylesheet_directory() .'/includes/class-phpbb-admin.php');
 require_once( get_stylesheet_directory() .'/includes/class-divisions.php' );
 require_once( get_stylesheet_directory() .'/includes/class-widget-ts-btn.php' );
 require_once( get_stylesheet_directory() .'/includes/class-widget-forums-btn.php' );
@@ -9,6 +11,12 @@ require_once( get_stylesheet_directory() .'/includes/class-widget-announcements.
  * Setup our theme defaults
  */
 function wp_christiancrew_setup() {
+
+	add_action( 'init', array( 'phpBB', 'init' ) );
+
+	if ( is_admin() ) {
+		add_action( 'init', array( 'phpBBAdmin', 'init' ) );
+	}
 
 	// Instantiate custom post types
 	$CC_Divisions = new CC_Divisions();
@@ -25,7 +33,7 @@ function wp_christiancrew_setup() {
 	add_theme_support('title-tag');
 
 	// Add support for featured images to the cc_divisions post type
-	add_theme_support( 'post-thumbnails', array( 'cc_divisions' ) );
+	add_theme_support( 'post-thumbnails', array( 'divisions' ) );
 	add_image_size( 'division-thumb', 246, 138, true );
 
 	// Register nav menu
