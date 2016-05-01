@@ -2,16 +2,14 @@
  * Announcements
  */
 .announcement {
+  width: 100%;
+  height: 82px;
+  background-color: $color-torch-red;
   position: relative;
   overflow: hidden;
   transform: translateZ(0);
   a {
     display: block;
-  }
-  img {
-    display: block;
-    width: 100%;
-    height: 82px;
   }
   .overlay {
     position: absolute;
