@@ -23,6 +23,9 @@
       margin-bottom: 20px;
     }
   }
+  @include bp(sm) {
+    width: 100%;
+  }
 }
 
 .grid-2-4 {

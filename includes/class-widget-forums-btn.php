@@ -20,7 +20,7 @@ class Forums_BTN extends WP_Widget {
     <div class="forums-btn grid-1-4">
       <a href="https://forums.ccgaming.com">
         <i class="fa fa-comments"></i>
-        Join the conversation on the forums
+        Chat with us on the forums
       </a>
     </div>
     <?php
