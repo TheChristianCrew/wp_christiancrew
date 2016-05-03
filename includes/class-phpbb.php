@@ -2,8 +2,13 @@
 
 class phpBB {
 
+  public static $url;
+
   public static function init() {
     add_shortcode( 'phpbb-list-members', array( 'phpBB', 'phpbb_list_members_shortcode' ) );
+
+    $phpbb_options = get_option('phpbb_options');
+    self::$url = $phpbb_options['phpbb_phpbb_url'];
   }
 
   public static function phpbb_list_members_shortcode($atts) {

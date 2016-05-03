@@ -17,8 +17,6 @@ class CC_Divisions {
 
         // Template action hooks
         add_action( 'cc_get_division_list', array( $this, 'get_division_list' ) );
-        add_action( 'cc_get_division_steam_store_link', array( $this, 'get_division_steam_store_link' ) );
-        add_action( 'cc_get_division_forum_link', array( $this, 'get_division_forum_link' ) );
 
     }
 

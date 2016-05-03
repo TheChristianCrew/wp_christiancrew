@@ -179,3 +179,22 @@
     }
   }
 }
+
+.division-links {
+  margin: 0 0 20px 0;
+
+  li {
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+
+    a {
+      font-weight: 600;
+      color: $color-white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

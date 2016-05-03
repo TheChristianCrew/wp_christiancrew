@@ -13,6 +13,10 @@ get_header() ?>
 
 		<div class="page-container grid">
       <div class="grid-4-4">
+				<ul class="division-links">
+					<li><a href="<?php echo get_post_meta($post->ID, '_steam_store_link', true); ?>"><i class="fa fa-shopping-cart fa-fw"></i> Steam Store Page</a></li>
+					<li><a href="<?php echo phpbb::$url .'viewforum.php?f='. get_post_meta($post->ID, '_forum_id', true); ?>"><i class="fa fa-comments fa-fw"></i> Forum Section</a></li>
+				</ul>
 			  <?php get_template_part('partials/page', 'loop') ?>
       </div>
 			<div>
