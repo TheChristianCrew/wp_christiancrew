@@ -79,7 +79,7 @@ function wp_christiancrew_scripts() {
 	wp_enqueue_style('theme-style', get_stylesheet_uri(), false, '4.0');
 
 	// Load FontAwesome
-	wp_enqueue_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', false, '4.5.0' );
+	wp_enqueue_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css', false, '4.6.1' );
 
 	// Load main JavaScript file
 	wp_enqueue_script( 'cc-script', get_template_directory_uri() . '/assets/js/cc.min.js', array( 'jquery' ), '12312015', true );
