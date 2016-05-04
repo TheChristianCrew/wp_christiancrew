@@ -201,3 +201,39 @@
     }
   }
 }
+
+.division_info {
+  background-color: $color-white;
+  color: $color-black;
+  padding: 5px;
+}
+
+/**
+ * phpBB list members
+ */
+.phpbb-list-members {
+  margin: 0;
+  li {
+    list-style: none;
+    a {
+      display: block;
+      background-color: $color-white;
+      text-decoration: none;
+      position: relative;
+      padding: 5px 5px 5px 60px;
+      img {
+        position: absolute;
+        left: 5px;
+      }
+      .username {
+        display: block;
+        font-weight: 700;
+        color: $color-black;
+      }
+      .rank {
+        font-weight: 600;
+        color: $color-emperor;
+      }
+    }
+  }
+}

@@ -18,7 +18,7 @@ class phpBB {
       'users' => '',
   		'class' => '',
   		'display_avatar' => true,
-  		'display_rank' => true,
+  		'display_rank' => true
   	), $atts));
 
     $phpbb_options = get_option('phpbb_options');
@@ -33,6 +33,9 @@ class phpBB {
       exit;
     }
 
+    // Was a class defined?
+    $class = (!empty($class) ? ' '. $class : '');
+
     // Connect to phpBB's database
   	$dbconnect = new mysqli($dbhost, $dbuser, $dbpasswd, $dbname);
 
@@ -44,7 +47,7 @@ class phpBB {
   	} else {
 
   		// Construct our SQL query
-  		$sql = 'SELECT U.user_id, U.username, U.user_avatar, R.rank_title
+  		$sql = 'SELECT U.user_id, U.username, U.user_avatar, R.rank_title, G.group_colour
   		FROM phpbb_users U
 
       INNER JOIN phpbb_groups G ON G.group_id = U.group_id
@@ -66,29 +69,30 @@ class phpBB {
 
         $result = $query->fetch_all(MYSQLI_ASSOC);
 
-    		$output = '<ul class="phpbb-list-members '. $class .'">';
+    		$output = '<ul class="phpbb-list-members'. $class .'">';
 
     		foreach ($result as $user) {
           $output .= "\n" . '<li>
-            <a href="'. $phpbb_url .'/memberlist.php?mode=viewprofile&amp;u='. $user['user_id'] .'">';
+            <a href="'. $phpbb_url .'/memberlist.php?mode=viewprofile&amp;u='. $user['user_id'] .'" style="border-right: 10px solid #'. $user['group_colour'] .'">';
 
               if ($display_avatar) {
                 if ($user['user_avatar'] == '') {
-                  $avatar = '<img src="https://ccgaming.com/images/ccgaming_avatar.jpg" alt="" />';
+                  $avatar = '<img src="https://ccgaming.com/images/ccgaming_avatar.jpg" alt="" width="50px" height="50px" />';
                 } else if (substr($user['user_avatar'], 0, 4) == 'http') {
-                  $avatar = '<img src="'. $user['user_avatar'] .'" alt="" />';
+                  $avatar = '<img src="'. $user['user_avatar'] .'" alt="" width="50px" height="50px" />';
                 } else {
-                  $avatar = '<img src="https://forums.ccgaming.com/download/file.php?avatar='. $user['user_avatar'] .'" alt="" />';
+                  $avatar = '<img src="'. $phpbb_url .'/download/file.php?avatar='. $user['user_avatar'] .'" alt="" width="50px" height="50px" />';
                 }
               }
 
-              $output .= '<p>
+              $output .= '
+                '. $avatar .'
                 <span class="username">'. $user['username'] .'</span>';
                 if ($display_rank) {
                   $output .= '<span class="rank">'. $user['rank_title'] .'</span>';
                 }
-              $output .= '</p>
-            </a>
+
+            $output .= '</a>
           </li>';
     		}
 
