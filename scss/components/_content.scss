@@ -187,6 +187,9 @@
     list-style: none;
     display: inline;
     margin-right: 20px;
+    @include bp(sm) {
+      display: block;
+    }
 
     a {
       font-weight: 600;
