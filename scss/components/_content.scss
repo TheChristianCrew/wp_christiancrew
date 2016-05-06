@@ -237,3 +237,23 @@
     }
   }
 }
+
+/**
+ * phpBB list topics
+ */
+.phpbb_list_topics {
+  a {
+    display: block;
+    color: $color-white;
+    text-decoration: none;
+    .topic_title {
+      font-weight: 700;
+    }
+    &:hover .topic_title {
+      text-decoration: underline;
+    }
+    span {
+      display: block;
+    }
+  }
+}

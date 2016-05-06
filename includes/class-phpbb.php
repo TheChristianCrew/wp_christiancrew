@@ -10,12 +10,13 @@ class phpBB {
 
     // Add shortcodes
     add_shortcode( 'phpbb-list-members', array( 'phpBB', 'phpbb_list_members_shortcode' ) );
+    add_shortcode( 'phpbb-list-topics', array( 'phpBB', 'phpbb_list_topics_shortcode' ) );
 
     // Get phpBB options set in the admin panel
     $phpbb_options = get_option('phpbb_options');
 
     // Define each of our options
-    self::$url = $phpbb_options['phpbb_phpbb_url'];
+    self::$url = rtrim($phpbb_options['phpbb_phpbb_url'], '/');
     self::$path = $phpbb_options['phpbb_phpbb_path'];
 
     // Connect to phpBB's database
@@ -115,10 +116,65 @@ class phpBB {
   		$output .= '</ul>';
 
   	} else {
-      $output = $dbconnect->error;
+      $output = self::$dbconnect->error;
     }
 
   	return $output;
+
+  }
+
+  /**
+   * Lists topics from phpBB from a defined section
+   */
+  function phpbb_list_topics_shortcode( $atts ) {
+
+    // Setup the shortcode's attributes
+    extract(shortcode_atts(array(
+      'limit' => '3',
+      'forum_id' => '',
+    ), $atts));
+
+    $sql = 'SELECT T.topic_id, T.forum_id, T.topic_title, T.topic_poster, T.topic_time, T.topic_first_post_id, F.forum_id, U.user_id, U.username, P.post_id, P.post_text
+      FROM phpbb_topics T, phpbb_forums F, phpbb_users U, phpbb_posts P
+      WHERE T.forum_id = F.forum_id
+      AND T.topic_poster = U.user_id
+      AND T.topic_first_post_id = P.post_id
+      AND F.forum_id IN ('. $forum_id .')
+      ORDER BY P.topic_id DESC
+      LIMIT '. $limit;
+
+    // Execute the SQL query
+    $query = self::$dbconnect->query($sql);
+
+    if ($query) {
+
+      // Get the results
+      $result = $query->fetch_all(MYSQLI_ASSOC);
+
+      $output = '<div class="phpbb_list_topics">';
+
+      // Output the results
+      foreach ($result as $topic) {
+
+        $output .= '<div class="grid-1-4">
+          <a href="'. self::$url .'/viewtopic.php?f='. $topic['forum_id'] .'&t='. $topic['topic_id'] .'">
+            <span class="topic_title">'. $topic['topic_title'] .'</span>
+            <span class="topic_user">by '. $topic['username'] .'</span>
+            <span class="topic_date">on '. date('F jS, Y', $topic['topic_time']) .'</span>
+          </a>
+        </div>';
+
+      }
+
+      $output .= '</div>';
+
+    } else {
+
+      $output = self::$dbconnect->error;
+
+    }
+
+    return $output;
 
   }
 

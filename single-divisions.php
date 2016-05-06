@@ -33,6 +33,12 @@ get_header() ?>
 					</section>
 				</div>
 			</div>
+			<div class="grid">
+				<div class="grid-4-4">
+					<h2>Recent Topics</h2>
+					<?php echo do_shortcode( '[phpbb-list-topics limit="4" forum_id="'. get_post_meta( $post->ID, '_forum_id', true ) .'"]' ); ?>
+				</div>
+			</div>
 		</div>
 
 	</article>
