@@ -30,6 +30,11 @@ body {
 	}
 }
 
-.page-container {
-	background-color: $container-background;
+/**
+ * Typography
+ */
+h2 {
+		text-transform: uppercase;
+		font-size: 1.2rem;
+		line-height: 2;
 }

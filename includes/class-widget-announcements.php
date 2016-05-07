@@ -21,7 +21,7 @@ class CC_Announcements extends WP_Widget {
     $url = $instance['announcement_url'];
     $bg_img = !empty($instance['announcement_bg_img']) ? ' style="background: url('. $instance['announcement_bg_img'] .') no-repeat"' : '';
     ?>
-    <div class="grid-2-4">
+    <div class="col-1-2">
       <article class="announcement"<?php echo $bg_img; ?>>
         <a href="<?php echo $url; ?>">
           <div class="overlay">

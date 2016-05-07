@@ -156,7 +156,7 @@ class phpBB {
       // Output the results
       foreach ($result as $topic) {
 
-        $output .= '<div class="grid-1-4">
+        $output .= '<div class="col-1-4">
           <a href="'. self::$url .'/viewtopic.php?f='. $topic['forum_id'] .'&t='. $topic['topic_id'] .'">
             <span class="topic_title">'. $topic['topic_title'] .'</span>
             <span class="topic_user">by '. $topic['username'] .'</span>

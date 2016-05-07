@@ -151,7 +151,7 @@ class CC_Divisions {
 
       // List the divisions
 			while ( $divisions->have_posts() ) : $divisions->the_post(); ?>
-				<div class="grid-1-4">
+				<div class="col-1-4">
 					<a href="<?php the_permalink(); ?>">
 						<?php the_post_thumbnail( 'division-thumb' ); ?>
 						<span><?php the_title(); ?></span>

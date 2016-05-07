@@ -1,0 +1,83 @@
+/**
+ * TeamSpeak button
+ */
+ .widget-ts a {
+   position: relative;
+   display: block;
+   text-decoration: none;
+   text-align: right;
+   text-transform: uppercase;
+   background-color: $color-mine-shaft-light;
+   color: $color-white;
+   padding: 5px 10px;
+   font-size: .8rem;
+   line-height: 1.2;
+   font-weight: 700;
+   height: 82px;
+   em {
+     font-size: 2rem;
+     display: block;
+   }
+   .overlay {
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     display: none;
+     padding: 10px;
+     text-align: left;
+     text-transform: none;
+     font-weight: normal;
+     strong {
+       text-transform: uppercase;
+     }
+     .server-details {
+       position: absolute;
+       left: 0;
+       bottom: 0;
+       background-color: $color-white;
+       color: $primary-color;
+       width: 75%;
+       font-weight: 400;
+       padding: 5px;
+     }
+     .download-ts {
+       position: absolute;
+     }
+  }
+  &:hover .overlay {
+    background-color: $primary-color;
+    display: block;
+  }
+}
+
+/**
+ * Forums button
+ */
+.widget-forum a {
+  display: block;
+  position: relative;
+  padding: 10px 10px 10px 90px;
+  text-align: right;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: .8rem;
+  font-weight: 700;
+  color: $color-red;
+  height: 82px;
+  i {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color: $color-silver;
+    font-size: 5rem;
+  }
+  &:hover {
+    background-color: $color-mine-shaft-dark;
+    color: $color-white;
+    i {
+      color: $color-red;
+    }
+  }
+}

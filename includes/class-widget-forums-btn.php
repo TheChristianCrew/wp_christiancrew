@@ -17,11 +17,13 @@ class Forums_BTN extends WP_Widget {
    */
   public function widget( $args, $instance ) {
     ?>
-    <div class="forums-btn grid-1-4">
-      <a href="https://forums.ccgaming.com">
-        <i class="fa fa-comments"></i>
-        Chat with us on the forums
-      </a>
+    <div class="col-1-4">
+      <div class="widget-forum">
+        <a href="https://forums.ccgaming.com">
+          <i class="fa fa-comments"></i>
+          Chat with us on the forums
+        </a>
+      </div>
     </div>
     <?php
   }
