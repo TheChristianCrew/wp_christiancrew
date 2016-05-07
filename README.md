@@ -24,13 +24,13 @@ In order to make changes to the theme, you will need the following:
 * [Sass](http://sass-lang.com/install)
 
 In addition to the packages above installed, you will need knowledge in the following areas:
-1. HTML
-1. CSS / Sass
-1. JavaScript / jQuery
-1. PHP
-1. WordPress theming
-1. Command line
-1. Git
+* HTML
+* CSS / Sass
+* JavaScript / jQuery
+* PHP
+* WordPress theming
+* Command line
+* Git
 
 ## Recommended Tools
 
