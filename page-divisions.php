@@ -14,10 +14,11 @@ get_header() ?>
 		<div class="container">
 			<div class="grid grid-pad">
       	<div class="col-1-1">
-			  <?php get_template_part('partials/page', 'loop') ?>
+			  	<?php get_template_part('partials/page', 'loop') ?>
+				</div>
       </div>
       <div class="divisions_list">
-				<div class="grid">
+				<div class="grid grid-pad">
         	<?php do_action( 'cc_get_division_list' ); ?>
 				</div>
       </div>
