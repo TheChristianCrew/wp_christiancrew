@@ -23,86 +23,63 @@
 		left: -5%;
 }
 
+#scene.scene-home li div {
+	background-repeat: no-repeat;
+	position: absolute;
+	transition: background-size .2s;
+}
+
 #scene.scene-home li .mission_bg {
 	background-image: url(assets/img/scene-home/home_parallax_mission_bg.png);
-	background-repeat: no-repeat;
 	width: 820px;
 	height: 494px;
-	position: absolute;
-		top: 40%;
-		right: 0;
-	transition: background-size .2s;
-	@include bp(lg) { background-size: 380px auto; }
-	@include bp(md) { background-size: 300px auto; }
-	@include bp(sm) { background-size: 200px auto; }
+	top: 250px;
+	left: 50%;
+	margin-left: -190px;
+	//@include bp(lg) { background-size: 380px auto; }
 }
 
 #scene.scene-home li .lol_guy {
 	background-image: url(assets/img/scene-home/home_parallax_lol_guy.png);
-	background-repeat: no-repeat;
 	width: 391px;
 	height: 578px;
-	position: absolute;
-		top: 10%;
-		right: 2%;
-	transition: background-size .2s;
-	@include bp(lg) { background-size: 380px auto; }
-	@include bp(md) { background-size: 300px auto; }
-	@include bp(sm) { background-size: 200px auto; }
+	top: 50px;
+	left: 50%;
+	margin-left: 220px;
 }
 
 #scene.scene-home li .lol_girl {
 	background-image: url(assets/img/scene-home/home_parallax_lol_girl.png);
-	background-repeat: no-repeat;
 	width: 521px;
 	height: 394px;
-	position: absolute;
-		top: 10%;
-		right: 8%;
-	transition: background-size .2s;
-	@include bp(lg) { background-size: 380px auto; }
-	@include bp(md) { background-size: 300px auto; }
-	@include bp(sm) { background-size: 200px auto; }
+	top: 60px;
+	left: 50%;
+	margin-left: 0;
 }
 
 #scene.scene-home li .tf2_pryo {
 	background-image: url(assets/img/scene-home/home_parallax_tf2_pyro.png);
-	background-repeat: no-repeat;
 	width: 522px;
 	height: 454px;
-	position: absolute;
-		top: 20%;
-		left: 30%;
-	transition: background-size .2s;
-	@include bp(lg) { background-size: 380px auto; }
-	@include bp(md) { background-size: 300px auto; }
-	@include bp(sm) { background-size: 200px auto; }
+	top: 100px;
+	left: 50%;
+	margin-left: -310px;
 }
 
 #scene.scene-home li .rl_car {
 	background-image: url(assets/img/scene-home/home_parallax_rl_car.png);
-	background-repeat: no-repeat;
 	width: 499px;
 	height: 318px;
-	position: absolute;
-		top: 35%;
-		left: 10%;
-	transition: background-size .2s;
-	@include bp(lg) { background-size: 380px auto; }
-	@include bp(md) { background-size: 300px auto; }
-	@include bp(sm) { background-size: 200px auto; }
+	top: 200px;
+	left: 50%;
+	margin-left: -520px;
 }
 
 #scene.scene-home li .rl_ball {
 	background-image: url(assets/img/scene-home/home_parallax_rl_ball.png);
-	background-repeat: no-repeat;
 	width: 391px;
 	height: 165px;
-	position: absolute;
-		top: 22%;
-		left: 10%;
-	transition: background-size .2s;
-	@include bp(lg) { background-size: 380px auto; }
-	@include bp(md) { background-size: 300px auto; }
-	@include bp(sm) { background-size: 200px auto; }
+	top: 110px;
+	left: 50%;
+	margin-left: -600px;
 }
