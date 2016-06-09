@@ -29,10 +29,10 @@
 <ul id="scene" class="scene-home">
 	<li class="layer" data-depth="0.10"><div class="background"></div></li>
 	<li class="layer" data-depth="0.20"><div class="lol_girl"></div></li>
-	<li class="layer" data-depth="0.30"><div class="lol_guy"></div></li>
+	<li class="layer" data-depth="0.40"><div class="lol_guy"></div></li>
 	<li class="layer" data-depth="0.40"><div class="rl_ball"></div></li>
 	<li class="layer" data-depth="0.30"><div class="rl_car"></div></li>
-	<li class="layer" data-depth="0.50"><div class="tf2_pryo"></div></li>
+	<li class="layer" data-depth="0.80"><div class="tf2_pryo"></div></li>
 	<li class="layer" data-depth="0.10"><div class="mission_bg"></div></li>
 </ul>
 
