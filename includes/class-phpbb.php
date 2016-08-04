@@ -68,7 +68,7 @@ class phpBB {
 		FROM phpbb_users U
 
     INNER JOIN phpbb_groups G ON G.group_id = U.group_id
-    INNER JOIN phpbb_ranks R ON R.rank_id = G.group_rank ';
+    INNER JOIN phpbb_ranks R ON R.rank_id = U.user_rank ';
 
     if (!empty($users)) {
       $sql .= 'WHERE U.user_id IN ('. $users .') ';
@@ -92,7 +92,7 @@ class phpBB {
         $output .= "\n" . '<li>
           <a href="'. self::$url .'/memberlist.php?mode=viewprofile&amp;u='. $user['user_id'] .'" style="border-right: 10px solid #'. $user['group_colour'] .'">';
 
-            if ($display_avatar) {
+            if ($display_avatar === true) {
               if ($user['user_avatar'] == '') {
                 $avatar = '<img src="https://ccgaming.com/images/ccgaming_avatar.jpg" alt="" width="50px" height="50px" />';
               } else if (substr($user['user_avatar'], 0, 4) == 'http') {
@@ -105,7 +105,7 @@ class phpBB {
             $output .= '
               '. $avatar .'
               <span class="username">'. $user['username'] .'</span>';
-              if ($display_rank) {
+              if ($display_rank === true) {
                 $output .= '<span class="rank">'. $user['rank_title'] .'</span>';
               }
 
