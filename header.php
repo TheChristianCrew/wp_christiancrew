@@ -24,7 +24,7 @@
 				<li><a href="<?php echo get_template_directory_uri(); ?>/tsviewer.php" class="ts-btn"><span><em class="ts-users">-</em> on TeamSpeak</span> <i class="fa fa-headphones"></i></a></li>
 				<li><a href="https://steamcommunity.com/groups/christiancrewgaming"><i class="fa fa-steam"></i></a></li>
 				<li><a href="https://twitter.com/ccgamingonline"><i class="fa fa-twitter"></i></a></li>
-				<li><a href="https://facebook.com/ccgaming"><i class="fa fa-facebook"></i></a></li>
+				<li><a href="https://facebook.com/ccgaming"><i class="fa fa-facebook-official"></i></a></li>
 			</ul>
 		</div>
 	</header>
