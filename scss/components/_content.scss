@@ -131,10 +131,6 @@
     a {
       font-weight: 600;
       color: $color-white;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
 }
@@ -212,9 +208,10 @@
     text-decoration: none;
     .topic_title {
       font-weight: 700;
+      text-decoration: underline;
     }
     &:hover .topic_title {
-      text-decoration: underline;
+      text-decoration: none;
     }
     span {
       display: block;
