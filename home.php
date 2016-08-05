@@ -4,9 +4,8 @@
 
 	<div class="home-intro">
 		<div class="grid no-pad">
-			<div class="push-4-12 mobile-col-1-1 no-pad">
-				<h2>Welcome to Christian Crew Gaming</h2>
-				<p>Our mission is to be a gaming community that provides a clean environment, great fellowship, and exciting gameplay!</p>
+			<div class="push-6-12 mobile-col-1-1 no-pad">
+				<p>At Christian Crew Gaming our mission is to be a gaming community with a clean environment, of fellowship, and exciting gameplay.</p>
 			</div>
 		</div>
 	</div>
