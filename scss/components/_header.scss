@@ -112,13 +112,20 @@
     list-style: none;
     margin-left: 5px;
     float: left;
+    &:nth-child(n+2) {
+      width: 32px;
+      text-align: center
+    }
   }
 
   a {
+    display: block;
     color: $color-white;
     background-color: $color-emperor;
     padding: 4px 8px;
+    margin-top: 12px;
     font-size: 0.9rem;
+    line-height: normal;
     text-decoration: none;
     border-radius: 3px;
     &:hover {
