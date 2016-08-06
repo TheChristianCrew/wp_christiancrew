@@ -97,3 +97,19 @@ if ( function_exists('register_sidebar') ) {
 		'description'   => 'Widgets that go in the home page container.',
 	));
 }
+
+/**
+ * Add page slug to body_class
+ * Source: http://www.wpbeginner.com/wp-themes/how-to-add-page-slug-in-body-class-of-your-wordpress-themes/
+ */
+function add_page_slug( $classes ) {
+
+	global $post;
+
+	if ( isset( $post ) ) {
+		$classes[] = $post->post_type . '-' . $post->post_name;
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'add_page_slug' );
