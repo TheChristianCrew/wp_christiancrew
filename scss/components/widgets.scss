@@ -55,7 +55,7 @@
 /**
  * Forums button
  */
-.widget-forum a {
+.widget-forum a, .widget-steam a {
   display: block;
   position: relative;
   padding: 10px 10px 10px 90px;
@@ -80,4 +80,18 @@
       color: $color-red;
     }
   }
+}
+
+.widget-forum.sc a, .widget-steam.sc a {
+  color: $color-silver;
+  background-color: $color-mine-shaft-dark;
+  &:hover {
+    color: $color-torch-red;
+  }
+}
+
+.widget-steam.sc a i {
+  font-size: 4rem;
+  top: 10px;
+  left: 20px;
 }

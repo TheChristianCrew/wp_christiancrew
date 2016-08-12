@@ -6,6 +6,7 @@ require_once( get_stylesheet_directory() .'/includes/class-divisions.php' );
 require_once( get_stylesheet_directory() .'/includes/class-widget-ts-btn.php' );
 require_once( get_stylesheet_directory() .'/includes/class-widget-forums-btn.php' );
 require_once( get_stylesheet_directory() .'/includes/class-widget-announcements.php' );
+require_once( get_stylesheet_directory() .'/includes/shortcodes.php' );
 
 /**
  * Setup our theme defaults
