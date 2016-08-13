@@ -60,7 +60,7 @@ add_shortcode( 'forums-btn', 'forums_btn' );
  */
  function steam_btn() {
    return '<div class="widget-steam sc">
-     <a href="#">
+     <a href="https://steamcommunity.com/groups/christiancrewgaming">
        <i class="fa fa-steam"></i>
        Join our Steam group
      </a>
