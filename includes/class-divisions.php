@@ -37,6 +37,7 @@ class CC_Divisions {
                 'public' => true,
                 'rewrite' => array('slug' => 'division'),
                 'supports' => array('title', 'editor', 'thumbnail', 'page-attributes'),
+                'hierarchical' => true
             )
         );
 
@@ -147,7 +148,7 @@ class CC_Divisions {
     function get_division_list() {
 
       // Query the divisions post type
-			$divisions = new WP_Query( array( 'post_type' => 'divisions' ) );
+			$divisions = new WP_Query( array( 'post_type' => 'divisions', 'orderby' => 'menu_order', 'order' => 'ASC' ) );
 
       // List the divisions
 			while ( $divisions->have_posts() ) : $divisions->the_post(); ?>
