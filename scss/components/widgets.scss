@@ -55,7 +55,11 @@
 /**
  * Forums button
  */
-.widget-forum a, .widget-steam a {
+.widget-forum a,
+.widget-steam a,
+.widget-join a,
+.widget-unban-request a,
+.widget-admin-request a {
   display: block;
   position: relative;
   padding: 10px 10px 10px 90px;
@@ -82,7 +86,11 @@
   }
 }
 
-.widget-forum.sc a, .widget-steam.sc a {
+.widget-forum.sc a,
+.widget-steam.sc a,
+.widget-join.sc a,
+.widget-unban-request a,
+.widget-admin-request a {
   color: $color-silver;
   background-color: $color-mine-shaft-dark;
   &:hover {
@@ -90,8 +98,13 @@
   }
 }
 
-.widget-steam.sc a i {
-  font-size: 4rem;
-  top: 10px;
-  left: 20px;
+.widget-steam.sc a,
+.widget-join.sc a,
+.widget-unban-request a,
+.widget-admin-request a {
+  i {
+    font-size: 4rem;
+    top: 10px;
+    left: 20px;
+  }
 }
