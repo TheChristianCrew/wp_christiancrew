@@ -1,0 +1,24 @@
+.divisions-rocket-league, .glass-bg {
+  background-image: url("assets/img/bg/rocket-league.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.divisions-rocket-league .container { padding-bottom: 0; }
+
+.glass-bg {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 99;
+  filter: blur(10px);
+}
+
+.glass-bg-container {
+  position: relative;
+  z-index: 100;
+  background-color: rgba(53, 53, 53, .6);
+  padding-bottom: 20px;
+}
