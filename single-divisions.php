@@ -34,7 +34,7 @@ get_header() ?>
 						<div class="col-2-3">
 							<h2>Division Info</h2>
 							<section class="division_info">
-								Division info.
+								<?php echo get_post_meta($post->ID, '_division_info', true); ?>
 							</section>
 						</div>
 					</div>

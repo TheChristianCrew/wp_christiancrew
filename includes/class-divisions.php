@@ -76,6 +76,7 @@ class CC_Divisions {
       $steam_store_link = get_post_meta( $post->ID, '_steam_store_link', true );
       $forum_id = get_post_meta( $post->ID, '_forum_id', true );
     	$division_leader_ids = get_post_meta( $post->ID, '_division_leader_ids', true );
+      $division_info = get_post_meta( $post->ID, '_division_info', true );
 
     	?>
 
@@ -102,6 +103,13 @@ class CC_Divisions {
               <p class="description">ID of each of the division's leaders, seperate by a comma (i.e. forums.ccgaming.com/memberlist.php?mode=viewprofile&u=<span style="font-weight:bold;color:#ff0000;">60</span>)</p>
             </td>
           </tr>
+          <tr>
+            <th scope="row"><label for="division_info"><?php _e( 'Division Info', 'cc-divisions-textdomain' ); ?></label></th>
+            <td>
+              <textarea id="division_info" name="division_info" cols="50" rows="5"><?php echo esc_attr( $division_info ); ?></textarea>
+              <p class="description">Division information, such as server IPs, etc. Use HTML to format text, add line breaks, etc.</p>
+            </td>
+          </tr>
         </tbody>
       </table>
 
@@ -122,6 +130,9 @@ class CC_Divisions {
 
       $division_leader_1 = (isset($_POST['division_leader_ids']) ? $_POST['division_leader_ids'] : '');
       update_post_meta($post_id, '_division_leader_ids', $division_leader_1);
+
+      $division_info = (isset($_POST['division_info']) ? $_POST['division_info'] : '');
+      update_post_meta($post_id, '_division_info', $division_info);
 
     }
 
