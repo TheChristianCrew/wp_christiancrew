@@ -73,7 +73,7 @@ add_shortcode( 'forums-btn', 'forums_btn' );
  */
 function join_btn() {
   return '<div class="widget-join sc">
-    <a href="'. bloginfo('site_url') .'/join">
+    <a href="'. get_site_url() .'/join">
       <i class="fa fa-pencil"></i>
       Join Christian Crew Gaming!
     </a>
@@ -99,7 +99,7 @@ add_shortcode( 'join-btn', 'join_btn' );
 */
 function admin_request_btn() {
   return '<div class="widget-admin-request sc">
-    <a href="'. bloginfo('site_url') .'/about/adminrequest">
+    <a href="'. get_site_url() .'/about/adminrequest">
       <i class="fa fa-gavel"></i>
       Request to be an admin of our servers
     </a>
