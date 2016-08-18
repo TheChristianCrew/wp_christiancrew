@@ -1,24 +1,44 @@
-.divisions-rocket-league, .glass-bg {
+/**
+ * Create arbitrary selectors to contain the background image styling for each
+ * division page. The selector can be arbitrary because we're just going to
+ * @extend it where needed below
+ */
+.rocket-league-bg {
   background-image: url("assets/img/bg/rocket-league.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
-.divisions-rocket-league .container { padding-bottom: 0; }
 
-.glass-bg {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  z-index: 99;
-  filter: blur(10px);
-}
+/**
+ * Wrap the below items under each division page's body selector. This is to
+ * avoid applying background image/glass effect styling on pages unintentionally
+ */
+.divisions-rocket-league {
 
-.glass-bg-container {
-  position: relative;
-  z-index: 100;
-  background-color: rgba(53, 53, 53, .6);
-  padding-bottom: 20px;
+  @extend .rocket-league-bg;
+
+  .container {
+    padding-bottom: 0;
+  }
+
+  .glass-bg {
+    @extend .rocket-league-bg;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 99;
+    filter: blur(10px);
+  }
+
+
+  .glass-bg-container {
+    position: relative;
+    z-index: 100;
+    background-color: rgba(53, 53, 53, .6);
+    padding-bottom: 20px;
+  }
+  
 }
