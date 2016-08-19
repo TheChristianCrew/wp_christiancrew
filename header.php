@@ -25,6 +25,8 @@
 				<li><a href="https://steamcommunity.com/groups/christiancrewgaming"><i class="fa fa-steam"></i></a></li>
 				<li><a href="https://twitter.com/ccgamingonline"><i class="fa fa-twitter"></i></a></li>
 				<li><a href="https://facebook.com/ccgaming"><i class="fa fa-facebook-official"></i></a></li>
+				<li><a href="https://www.youtube.com/user/ChristianCrewGaming"><i class="fa fa-youtube-play"></i></a></li>
+				<li><a href="https://twitch.tv/christiancrewtv"><i class="fa fa-twitch"></i></a></li>
 			</ul>
 		</div>
 	</header>
