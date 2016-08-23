@@ -1,4 +1,36 @@
 /**
+ * Wrap the below items under each division page's body selector. This is to
+ * avoid applying background image/glass effect styling on pages unintentionally
+ */
+.divisions-rocket-league,
+.divisions-team-fortress-2,
+.divisions-league-of-legends,
+.divisions-whatelse {
+
+  .container {
+    padding-bottom: 0;
+  }
+
+  .glass-bg {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 99;
+    filter: blur(10px);
+  }
+
+  .glass-bg-container {
+    position: relative;
+    z-index: 100;
+    background-color: rgba(53, 53, 53, .6);
+    padding-bottom: 20px;
+  }
+
+}
+
+/**
  * Create arbitrary selectors to contain the background image styling for each
  * division page. The selector can be arbitrary because we're just going to
  * @extend it where needed below
@@ -10,35 +42,43 @@
   background-attachment: fixed;
 }
 
-/**
- * Wrap the below items under each division page's body selector. This is to
- * avoid applying background image/glass effect styling on pages unintentionally
- */
 .divisions-rocket-league {
-
   @extend .rocket-league-bg;
+  .glass-bg { @extend .rocket-league-bg; }
+}
 
-  .container {
-    padding-bottom: 0;
-  }
+.team-fortress-bg {
+  background-image: url("assets/img/bg/team-fortress.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
-  .glass-bg {
-    @extend .rocket-league-bg;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    z-index: 99;
-    filter: blur(10px);
-  }
+.divisions-team-fortress-2 {
+  @extend .team-fortress-bg;
+  .glass-bg { @extend .team-fortress-bg; }
+}
 
+.league-of-legens-bg {
+  background-image: url("assets/img/bg/lol.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
-  .glass-bg-container {
-    position: relative;
-    z-index: 100;
-    background-color: rgba(53, 53, 53, .6);
-    padding-bottom: 20px;
-  }
-  
+.divisions-league-of-legends {
+  @extend .league-of-legends-bg;
+  .glass-bg { @extend .league-of-legends-bg; }
+}
+
+.whatelse-bg {
+  background-image: url("assets/img/bg/whatelse.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.divisions-whatelse {
+  @extend .whatelse-bg;
+  .glass-bg { @extend .whatelse-bg; }  
 }
