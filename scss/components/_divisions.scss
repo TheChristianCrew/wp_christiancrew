@@ -59,7 +59,7 @@
   .glass-bg { @extend .team-fortress-bg; }
 }
 
-.league-of-legens-bg {
+.league-of-legends-bg {
   background-image: url("assets/img/bg/lol.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -80,5 +80,5 @@
 
 .divisions-whatelse {
   @extend .whatelse-bg;
-  .glass-bg { @extend .whatelse-bg; }  
+  .glass-bg { @extend .whatelse-bg; }
 }
