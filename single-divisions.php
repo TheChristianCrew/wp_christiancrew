@@ -16,7 +16,7 @@ get_header() ?>
 			<div class="glass-bg-container">
 				<div class="grid grid-pad">
 		      <div class="col-1-1">
-						<?php if ($post->post_name != 'whatelse') : ?>
+						<?php if ($post->post_name != 'what-else') : ?>
 							<ul class="division-links">
 								<li><a href="<?php echo get_post_meta($post->ID, '_steam_store_link', true); ?>"><i class="fa fa-shopping-cart fa-fw"></i> Steam Store Page</a></li>
 								<li><a href="<?php echo phpbb::$url .'viewforum.php?f='. get_post_meta($post->ID, '_forum_id', true); ?>"><i class="fa fa-comments fa-fw"></i> Forum Section</a></li>
@@ -25,7 +25,7 @@ get_header() ?>
 					  <?php get_template_part('partials/page', 'loop') ?>
 		      </div>
 				</div>
-				<?php if ($post->post_name != 'whatelse') : ?>
+				<?php if ($post->post_name != 'what-else') : ?>
 					<div class="grid grid-pad">
 						<div class="col-1-3">
 							<h2>Division Leaders</h2>
