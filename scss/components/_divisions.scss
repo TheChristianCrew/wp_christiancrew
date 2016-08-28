@@ -5,7 +5,7 @@
 .divisions-rocket-league,
 .divisions-team-fortress-2,
 .divisions-league-of-legends,
-.divisions-whatelse {
+.divisions-what-else {
 
   .container {
     padding-bottom: 0;
@@ -71,14 +71,14 @@
   .glass-bg { @extend .league-of-legends-bg; }
 }
 
-.whatelse-bg {
+.what-else-bg {
   background-image: url("assets/img/bg/whatelse.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
 
-.divisions-whatelse {
-  @extend .whatelse-bg;
-  .glass-bg { @extend .whatelse-bg; }
+.divisions-what-else {
+  @extend .what-else-bg;
+  .glass-bg { @extend .what-else-bg; }
 }
