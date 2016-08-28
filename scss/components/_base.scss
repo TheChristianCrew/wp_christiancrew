@@ -1,0 +1,40 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font: 16px/1.5 'Open Sans', arial;
+}
+
+body {
+	background-color: $body-background;
+	color: $color-white;
+}
+
+.inner-wrap {
+	position: relative;
+	max-width: $screen-lg;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.page-wrap {
+	position: relative;
+	z-index: 99;
+	max-width: $screen-lg;
+	margin: ($spacing * 2) auto $spacing;
+	@include bp(lg) {
+		margin: $spacing 10px 10px;
+	}
+}
+
+/**
+ * Typography
+ */
+h2 {
+		text-transform: uppercase;
+		font-size: 1.2rem;
+		line-height: 2;
+}

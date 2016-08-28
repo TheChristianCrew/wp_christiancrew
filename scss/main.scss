@@ -1,0 +1,48 @@
+/**
+ * This is the main Sass stylesheet. It does not (or should not) contains any
+ * actual styles, but rather imports all partials
+ */
+
+/**
+ * Import the required WordPress stylesheet header
+ * This MUST be included first!
+ */
+@import "wp";
+
+/**
+ * Import fonts
+ */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700);
+
+/**
+ * Import vendor stylesheets
+ * We include this second as we might need to overwrite any styles contained
+ * therein
+ */
+@import "vendor/normalize";
+@import "vendor/jquery.magnific-popup";
+
+/**
+ * Import utility stylesheets (variables, mixins, etc)
+ */
+@import "utilities/mixins";
+@import "utilities/variables";
+@import "utilities/grid";
+
+/**
+ * Finally, import the individual website component stylesheets
+ */
+@import "components/base";
+@import "components/header";
+@import "components/footer";
+@import "components/parallax-scenes";
+@import "components/container";
+@import "components/widgets";
+@import "components/articles";
+@import "components/content";
+@import "components/divisions";
+
+/**
+ * Import our shameful stylesheet...
+ */
+@import "shame";

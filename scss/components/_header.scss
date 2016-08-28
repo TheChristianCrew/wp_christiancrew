@@ -1,0 +1,163 @@
+/**
+ * Site Header
+ */
+
+.site-header {
+  position: relative;
+  z-index: 100;
+  height: $header-height;
+  margin-top: $spacing;
+  line-height: $header-height;
+  background-color: $header-background;
+  @include clearfix();
+}
+
+.site-title {
+  position: absolute;
+  margin: 0;
+  a {
+    display: block;
+    width: 89px;
+    height: 50px;
+    text-indent: -9999px;
+    background: url('assets/img/logo.jpg') no-repeat;
+  }
+}
+
+.site-nav {
+  margin-left: 109px;
+  @include clearfix();
+  @include bp(lg) {
+    margin: 0;
+    display: block;
+    //clip: rect(0 0 0 0);
+    max-height: 0;
+    overflow: hidden;
+    //zoom: 1;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: block;
+    float: left;
+    list-style: none;
+    @include bp(lg) {
+      float: none;
+    }
+  }
+
+  a {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-torch-red;
+    &:hover {
+      color: $color-tree-poppy;
+    }
+    @include bp(lg) {
+      background-color: $color-torch-red;
+      color: $color-white;
+    }
+  }
+
+}
+
+.nav-toggle {
+  margin-left: 109px;
+  display: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-torch-red;
+  border: 1px solid $color-torch-red;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  @include bp(lg) {
+    display: inline;
+  }
+  &:hover {
+    color: $color-white;
+    background-color: $color-torch-red;
+  }
+}
+
+.site-nav.opened {
+  max-height: 9999px;
+}
+
+.connect-links {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+    top: 0;
+    right: 10px;
+
+  li {
+    list-style: none;
+    margin-left: 5px;
+    float: left;
+    &:nth-child(n+2) {
+      width: 32px;
+      text-align: center
+    }
+    @include bp(md) {
+      &:nth-child(1) {
+        width: 32px;
+        text-align: center;
+      }
+    }
+    @include bp(md) {
+      &:nth-child(n+1) {
+        width: 24px;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    color: $color-white;
+    background-color: $color-emperor;
+    padding: 4px 8px;
+    margin-top: 12px;
+    font-size: 0.9rem;
+    line-height: normal;
+    text-decoration: none;
+    border-radius: 3px;
+    &:hover {
+      background-color: $color-mine-shaft-light;
+    }
+    @include bp(md) {
+      padding: 2px 4px;
+      font-size: 0.8rem;
+      margin-top: 14px;
+    }
+  }
+
+}
+
+.ts-btn {
+  em {
+    font-style: normal;
+  }
+  @include bp(md) {
+    span {
+      display: none;
+    }
+  }
+}

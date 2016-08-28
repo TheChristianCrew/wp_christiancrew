@@ -1,22 +1,21 @@
-<?php get_header(); ?>
+<?php get_header() ?>
 
-	<section id="cc-page-title">
-		<div class="cc-inner-wrap">
-			<h2>Page Not Found</h2>
-	</section>
-	
-	<div class="cc-container">
-		
-		<div class="cc-inner-wrap grid">
-			
-			<div class="col-12">
-				
-				The page you're looking for could not be found!
-				
+<div class="page-wrap">
+
+	<article>
+
+		<h1 class="page-title">Game Over</h1>
+
+		<div class="container">
+			<div class="grid grid-pad">
+				<div class="col-1-1">
+					Sorry, dude. We couldn't locate the page you were looking for.
+				</div>
 			</div>
-			
 		</div>
-		
-	</div>
+
+	</article>
+
+</div>
 
 <?php get_footer(); ?>

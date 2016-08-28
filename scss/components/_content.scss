@@ -1,0 +1,282 @@
+.home .page-wrap {
+    margin-top: 250px;
+}
+
+/**
+ * Home Intro
+ */
+.home-intro {
+  margin-bottom: 20px;
+  text-align: right;
+  p {
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+/**
+ * Announcements
+ */
+.announcement {
+  width: 100%;
+  height: 82px;
+  background-color: $color-torch-red;
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  a {
+    display: block;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: $color-white;
+    transform: translateY(100%);
+    transition: transform .35s ease-out;
+    span {
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      color: $color-red;
+      font-weight: 700;
+      font-size: .9rem;
+      text-transform: uppercase;
+      transition: opacity .35s ease-out;
+    }
+  }
+  &:hover .overlay {
+    transform: translateY(0);
+  }
+  h3 {
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 1rem;
+    text-decoration: underline;
+    transform: translateY(calc(-100%));
+    transition: transform .35s ease-out;
+  }
+  &:hover h3 {
+    transform: translateY(0);
+  }
+  p {
+    padding: 0 10px;
+    margin-top: -5px;
+  }
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: transparent;
+    transition: background .35s ease-out;
+  }
+  &:hover:before {
+    background-color: rgba(0, 0, 0, .8);
+  }
+}
+
+/**
+ * Division lists
+ */
+.divisions_list {
+  line-height: 1;
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: $color-red;
+    text-transform: uppercase;
+
+    span {
+      display: block;
+      padding-left: 5px;
+      padding-bottom: 5px;
+    }
+
+    &:hover {
+      background-color: $color-mine-shaft-dark;
+      color: $color-white;
+    }
+
+  }
+}
+
+.page-divisions .divisions_list {
+  a {
+    background-color: $color-white;
+    &:hover {
+      background-color: $color-red;
+      color: $color-white;
+    }
+  }
+}
+
+.division-links {
+  margin: 0 0 20px 0;
+
+  li {
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+    @include bp(sm) {
+      display: block;
+    }
+
+    a {
+      font-weight: 600;
+      color: $color-white;
+    }
+  }
+}
+
+.division_info {
+  background-color: $color-white;
+  color: $color-black;
+  padding: 5px;
+}
+
+/**
+ * About Page
+ */
+.leadership-team {
+  overflow: hidden;
+  li {
+    float: left;
+    width: 32.33%;
+    margin-right: 1%;
+    @include bp(lg) {
+      width: 49%;
+    }
+    @include bp(md) {
+      width: 100%;
+      margin: 0 0 1% 0;
+    }
+  }
+}
+
+.phpbb-list-members.members {
+  overflow: hidden;
+  li {
+    float: left;
+    width: 24%;
+    margin-right: 1%;
+    a {
+      padding-left: 5px;
+      .username {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+/**
+ * phpBB list members
+ */
+.phpbb-list-members {
+  margin: 0;
+  li {
+    list-style: none;
+    a {
+      display: block;
+      background-color: $color-white;
+      text-decoration: none;
+      position: relative;
+      padding: 5px 5px 5px 60px;
+      img {
+        position: absolute;
+        left: 5px;
+      }
+      .username {
+        display: block;
+        font-weight: 700;
+        color: $color-black;
+      }
+      .rank {
+        font-weight: 600;
+        color: $color-emperor;
+      }
+    }
+  }
+}
+
+/**
+ * phpBB list topics
+ */
+.phpbb_list_topics {
+  a {
+    display: block;
+    color: $color-white;
+    text-decoration: none;
+    .topic_title {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+    &:hover .topic_title {
+      text-decoration: none;
+    }
+    span {
+      display: block;
+    }
+  }
+}
+
+/**
+ * Seamless Donations
+ */
+.page-donate #dgx-donate-container {
+  padding: 20px;
+  margin: 0;
+  border-radius: 0;
+  background: $color-white;
+  color: $color-black;
+
+  .dgx-donate-form-section {
+    padding: 0;
+    margin: 0 0 20px;
+    border: 0!important;
+    border-radius: 0;
+    background: transparent;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .dgx-donate-form-section h2 {
+    color: $color-torch-red;
+  }
+
+  #_dgx_donate_donor_first_name,
+  #_dgx_donate_donor_last_name,
+  #_dgx_donate_donor_email {
+    position: relative;
+    margin-bottom: 5px;
+    input {
+      position: absolute;
+      left: 120px;
+    }
+  }
+
+}
+
+.seamless-donations-error-message-field {
+  background-color: transparent;
+  color: $color-red;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.seamless-donations-forms-error-message {
+  color: $color-white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.dgx-donate-form-section input[type=image] {
+  border: 0;
+}
