@@ -1,40 +1,21 @@
 <?php get_header() ?>
 
-	<section id="cc-page-title">
-		<div class="cc-inner-wrap">
-			<h2><?php the_title(); ?></h2>
-	</section>
+<div class="page-wrap">
 
-	<div class="cc-container">
+	<article>
 
-		<div class="cc-inner-wrap grid">
+		<h1 class="page-title"><?php the_title(); ?></h1>
 
-			<?php if (is_active_sidebar(get_post($post->post_parent)->post_name .'_page_sidebar')) { ?>
-
-				<div class="col-4">
-
-					<?php get_sidebar(); ?>
-
+		<div class="container">
+			<div class="grid grid-pad">
+				<div class="col-1-1">
+					<?php get_template_part('partials/page', 'loop') ?>
 				</div>
-
-				<div class="col-8">
-
-					<?php get_template_part('partials/page-loop.php') ?>
-
-				</div>
-
-			<?php } else { ?>
-
-				<div class="col-12">
-
-					<?php get_template_part('partials/page-loop.php') ?>
-
-				</div>
-
-			<?php } ?>
-
+			</div>
 		</div>
 
-	</div>
+	</article>
+
+</div>
 
 <?php get_footer(); ?>
