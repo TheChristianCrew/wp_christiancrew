@@ -6,22 +6,11 @@
 		$ancestors = get_post_ancestors($post);
 	?>
 
-	<?php
-		if (is_home() || is_single() || is_archive()) {
-			if (function_exists('dynamic_sidebar') && dynamic_sidebar('blog_sidebar')) : else : ?>
+	<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar(get_post($ancestors[0])->post_name .'_page_sidebar') || dynamic_sidebar(get_post($ancestors[1])->post_name .'_page_sidebar')) : ?>
 	
-				<!-- If no dynamic sidebar exists, use the content below -->
-				Error loading sidebar
+		<!-- If no dynamic sidebar exists, use the content below -->
+		Error loading <?php echo $post->post_name; ?> sidebar
 		
-			<?php endif;
-		} else {
-			if (function_exists('dynamic_sidebar') && dynamic_sidebar(get_post($ancestors[0])->post_name .'_page_sidebar') || dynamic_sidebar(get_post($ancestors[1])->post_name .'_page_sidebar')) : else : ?>
-	
-				<!-- If no dynamic sidebar exists, use the content below -->
-				Error loading <?php echo $post->post_name; ?> sidebar
-		
-			<?php endif;		
-		}
-	?>
+	<?php endif; ?>
 
 </div> <!-- /sidebar -->
