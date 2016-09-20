@@ -1,0 +1,23 @@
+/**
+ * Navigational menus
+ */
+
+.widget_nav_menu {
+  ul {
+    margin: 0;
+    li {
+      list-style-type: none;
+      a {
+        background-color: $color-white;
+        color: $color-torch-red;
+        text-decoration: none;
+        display: block;
+        padding: 2px 8px;
+      }
+      &.current-menu-item a, a:hover {
+        background-color: $color-torch-red;
+        color: $color-white;
+      }
+    }
+  }
+}

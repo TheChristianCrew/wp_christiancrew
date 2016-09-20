@@ -97,6 +97,15 @@ if ( function_exists('register_sidebar') ) {
 		'id'   => 'home-widgets',
 		'description'   => 'Widgets that go in the home page container.',
 	));
+	register_sidebar(array(
+		'name' => 'Media Sidebar',
+		'id'   => 'media_page_sidebar',
+		'description'   => 'The Media page sidebar.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>'
+	));
 }
 
 /**
