@@ -1,0 +1,21 @@
+/**
+ * Button Styles
+ */
+
+// Easy Media Download Buttons
+a.emd_dl_cc_btn_primary {
+  font-family: $font-stack;
+  box-shadow: none;
+  color: $color-silver!important;
+  background: $color-mine-shaft-dark;
+  border: 0;
+  text-shadow: none;
+  width: 200px;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  &:hover {
+    color: $color-torch-red!important;
+    background: $color-mine-shaft-dark;
+  }
+}
